@@ -106,7 +106,7 @@ public class DevicesActivity extends AppCompatActivity {
     };
 
     private void update() {
-        notifyAll();
+        not
     }
 
     private void showToast(String s) {
