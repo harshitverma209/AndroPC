@@ -23,9 +23,12 @@ class deviceAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHol
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
-        (holder as UserViewHolder).bindData(usersList[position])
+        (holder as DeviceViewHolder).bindData(deviceList[position])
     }
 
     inner class DeviceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bindData(s: String) {
+            TODO("Not yet implemented")
+        }
     }
 }
