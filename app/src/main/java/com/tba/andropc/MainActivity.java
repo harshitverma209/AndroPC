@@ -37,8 +37,11 @@ View trackpad;
                         break;
                     }
                     case MotionEvent.ACTION_MOVE: {
-                        
+
                         break;
+                    }
+                    default:{
+                        
                     }
                 }
                 return false;
