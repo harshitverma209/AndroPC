@@ -32,7 +32,7 @@ public class DevicesActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_devices);
 
-        dev=
+        dev=deviceAdapter(this);
         bluetoothAdapter =BluetoothAdapter.getDefaultAdapter();
         enableBT();
 
