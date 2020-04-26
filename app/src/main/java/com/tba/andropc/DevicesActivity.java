@@ -9,31 +9,31 @@ import android.os.Bundle;
 import java.util.UUID;
 
 public class DevicesActivity extends AppCompatActivity {
-    private BluetoothAdapter BA;
+    private BluetoothAdapter bluetoothAdapter;
     RecyclerView deviceList;
     public UUID uuid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_devices);
-        BA=BluetoothAdapter.getDefaultAdapter();
+        bluetoothAdapter =BluetoothAdapter.getDefaultAdapter();
         uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
 //        deviceList=new RecyclerView(this,);
     }
     private void scanDevices(){
-        BA.startDiscovery();
+        bluetoothAdapter.startDiscovery();
     }
     public void enableBT(){
         BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        if (!BA.isEnabled()){
+        if (!bluetoothAdapter.isEnabled()){
             mBluetoothAdapter.enable();
         }
 
     }
     public void disableBT(){
         BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        if (BA.isEnabled()){
+        if (bluetoothAdapter.isEnabled()){
             mBluetoothAdapter.disable();
         }
     }
