@@ -18,10 +18,23 @@ public class DevicesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_devices);
         BA=BluetoothAdapter.getDefaultAdapter();
         uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-        
+
 //        deviceList=new RecyclerView(this,);
     }
     private void scanDevices(){
         BA.startDiscovery();
+    }
+    public void enableBT(){
+        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (!BA.isEnabled()){
+            mBluetoothAdapter.enable();
+        }
+
+    }
+    public void disableBT(){
+        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (BA.isEnabled()){
+            mBluetoothAdapter.disable();
+        }
     }
 }
