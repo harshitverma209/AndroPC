@@ -26,6 +26,7 @@ public class DevicesActivity extends AppCompatActivity {
     RecyclerView deviceRecyclerView;
     private ArrayList<DeviceModel> devicesList;
     public UUID uuid;
+    DeviceAdapter dev;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,7 @@ public class DevicesActivity extends AppCompatActivity {
 
         deviceRecyclerView=findViewById(R.id.rec);
 
-        DeviceAdapter dev= new DeviceAdapter(this);
+        dev= new DeviceAdapter(this);
         deviceRecyclerView.setAdapter(dev);
 
         LinearLayoutManager lm = new LinearLayoutManager(this);
