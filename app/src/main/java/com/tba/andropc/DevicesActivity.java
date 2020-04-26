@@ -105,6 +105,10 @@ public class DevicesActivity extends AppCompatActivity {
         }
     };
 
+    private void update() {
+        notify();
+    }
+
     private void showToast(String s) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
