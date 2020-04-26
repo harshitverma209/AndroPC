@@ -1,9 +1,13 @@
 package com.tba.andropc
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class deviceAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    private val mLayoutInflater by lazy { LayoutInflater.from(context) }
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return UserViewHolder(mLayoutInflater.inflate(R.layout.main_data,parent,false))
 
