@@ -18,7 +18,7 @@ class deviceAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHol
         return DeviceViewHolder(mLayoutInflater.inflate(R.layout.devicename, parent, false))
 
     }
-
+    
     override fun getItemCount(): Int {
         return deviceList.size
     }
