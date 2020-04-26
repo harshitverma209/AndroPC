@@ -86,6 +86,7 @@ public class DevicesActivity extends AppCompatActivity {
                 devicesList.add(device.getName()+"\n"+device.getAddress());
                 Log.d("chech","got it");
                 showToast("Found device " + device.getName());
+                notify();
             }
         }
     };
