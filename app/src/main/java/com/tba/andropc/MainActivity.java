@@ -41,7 +41,7 @@ View trackpad;
                         Log.d("chech", "Down!");
                         posX=event.getX();
                         posY=event.getY();
-//                        break;
+                        break;
                     }
                     case MotionEvent.ACTION_MOVE: {
                         newPosX=event.getX();
@@ -51,7 +51,7 @@ View trackpad;
                         posX=newPosX;
                         posY=newPosY;
                         moveMouse(movementInX,movementInY);
-//                        break;
+                        break;
                     }
                     default:{
 
