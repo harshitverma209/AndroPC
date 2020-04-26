@@ -44,6 +44,7 @@ View trackpad;
                         break;
                     }
                     case MotionEvent.ACTION_MOVE: {
+                        Log.d("chech", "Move");
                         newPosX=event.getX();
                         newPosY=event.getY();
                         movementInX=posX-newPosX;
