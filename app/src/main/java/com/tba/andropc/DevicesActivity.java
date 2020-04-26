@@ -1,5 +1,6 @@
 package com.tba.andropc;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,6 +26,7 @@ public class DevicesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_devices);
 
 
