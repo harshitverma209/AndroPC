@@ -30,7 +30,7 @@ class deviceAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHol
 
     inner class DeviceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindData(s: DeviceModel) {
-            itemView.name.text=getNa
+            itemView.name.text= s.toString()
         }
     }
 }
