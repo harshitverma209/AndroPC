@@ -30,8 +30,10 @@ class DeviceAdapter(context: Context, deviceModel: ArrayList<DeviceModel>): Recy
     }
 
     inner class DeviceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindData(s: DeviceModel) {
-            itemView.name.text= s.toString()
+        fun bindData(dev: DeviceModel) {
+            itemView.name.text= dev.deviceName;
+            itemView.address.text=dev.deviceMac;
+
         }
     }
 }
