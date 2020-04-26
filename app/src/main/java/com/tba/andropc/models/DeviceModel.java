@@ -1,6 +1,12 @@
 package com.tba.andropc.models;
 
 public class DeviceModel {
+    public DeviceModel(String deviceName, String deviceMac) {
+        this.deviceName=deviceName;
+        this.deviceMac=deviceMac;
+
+    }
+
     public String getDeviceName() {
         return deviceName;
     }
