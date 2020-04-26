@@ -109,10 +109,11 @@ public class DevicesActivity extends AppCompatActivity {
     private void update() {
         synchronized (dev){
         dev.notifyDataSetChanged();
+        dev.notify();
         Log.d("chech", "Notified");
 
         }
-        
+
     }
 
     private void showToast(String s) {
