@@ -45,7 +45,7 @@ public class DevicesActivity extends AppCompatActivity {
         registerReceiver(mReceiver, filter);
 
         scanDevices();
-        devicesList=new ArrayList<String>();
+        devicesList=new ArrayList<DeviceModel>();
 
 
 
