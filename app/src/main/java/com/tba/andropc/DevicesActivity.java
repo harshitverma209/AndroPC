@@ -35,7 +35,7 @@ public class DevicesActivity extends AppCompatActivity {
 
         deviceRecyclerView=findViewById(R.id.rec);
 
-        dev= new DeviceAdapter(this);
+        dev= new DeviceAdapter(this, );
         deviceRecyclerView.setAdapter(dev);
 
         LinearLayoutManager lm = new LinearLayoutManager(this);
