@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.tba.andropc.models.DeviceModel
 import kotlinx.android.synthetic.main.devicename.view.*
+import java.util.ArrayList
 
-class DeviceAdapter(context: Context,deviceModel: DeviceModel): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    var deviceList = mutableListOf<DeviceModel>()
+class DeviceAdapter(context: Context, deviceModel: ArrayList<DeviceModel>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    var deviceList = deviceModel
 
     private val mLayoutInflater by lazy { LayoutInflater.from(context) }
 
