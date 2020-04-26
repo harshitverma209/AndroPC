@@ -114,6 +114,7 @@ public class DevicesActivity extends AppCompatActivity {
         synchronized (deviceRecyclerView){
             deviceRecyclerView.notifyAll();
         }
+        deviceRecyclerView.setAdapter(deviceAdapter);
     }
 
     private void showToast(String s) {
