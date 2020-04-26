@@ -11,6 +11,6 @@ public class ActionSelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_action_selection);
-        act_trackpad=findViewById()
+        act_trackpad=findViewById(R.id.act_trackpad);
     }
 }
