@@ -3,6 +3,7 @@ package com.tba.andropc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,7 +29,13 @@ View trackpad;
             connect=etMain.getText().toString();
             }
         });
-
+        trackpad.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                case event
+                return false;
+            }
+        });
 
     }
     public void sendTextToPC()
