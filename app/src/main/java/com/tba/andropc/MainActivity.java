@@ -36,7 +36,7 @@ View trackpad;
                     case MotionEvent.ACTION_DOWN: {
                         break;
                     }
-                    case MotionEvent.ACTION_MOVE:{
+                    case MotionEvent.ACTION_MOVE: {
                         
                         break;
                     }
