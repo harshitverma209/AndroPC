@@ -34,6 +34,7 @@ View trackpad;
             float posX,posY;
             float newPosX,newPosY;
             float movementInX,movementInY;
+
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 Log.d("chech", event.getActionMasked()+"");
