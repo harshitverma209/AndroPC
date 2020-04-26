@@ -7,24 +7,24 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class deviceAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    var usersList = mutableListOf<String>()
+    var deviceList = mutableListOf<String>()
 
     private val mLayoutInflater by lazy { LayoutInflater.from(context) }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return UserViewHolder(mLayoutInflater.inflate(R.layout.devicename, parent, false))
+        return DeviceViewHolder(mLayoutInflater.inflate(R.layout.devicename, parent, false))
 
     }
 
     override fun getItemCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return deviceList.size
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        
     }
 
-    inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class DeviceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     }
 }
