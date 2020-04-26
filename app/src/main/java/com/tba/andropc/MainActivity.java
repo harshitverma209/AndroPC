@@ -36,6 +36,7 @@ View trackpad;
             float movementInX,movementInY;
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                Log.d("chech", event.getActionMasked()+"")
                 switch(event.getActionMasked()){
                     case MotionEvent.ACTION_DOWN: {
                         Log.d("chech", "Down!");
