@@ -8,6 +8,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -25,9 +26,29 @@ public class DevicesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_devices);
+
+
         bluetoothAdapter =BluetoothAdapter.getDefaultAdapter();
-        uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
         enableBT();
+
+        uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+        IntentFilter filter = new IntentFilter();
+
+        filter.addAction(BluetoothDevice.ACTION_FOUND);
+        filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED);
+        filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
+
+        registerReceiver(mReceiver, filter);
+
+        scanDevices();
+        devicesList=new ArrayList<String>();
+
+
+
+
+
+
+
 
     }
     private void scanDevices(){
@@ -71,5 +92,12 @@ public class DevicesActivity extends AppCompatActivity {
 
     private void showToast(String s) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        disableBT();
+        unregisterReceiver(mReceiver);
     }
 }
