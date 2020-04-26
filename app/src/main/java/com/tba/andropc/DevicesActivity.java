@@ -107,7 +107,7 @@ public class DevicesActivity extends AppCompatActivity {
 
     private void update() {
         synchronized (deviceRecyclerView.getAdapter()){
-        deviceRecyclerView.getAdapter().notify();
+        deviceRecyclerView.getAdapter().notifyDataSetChanged();
         }
     }
 
