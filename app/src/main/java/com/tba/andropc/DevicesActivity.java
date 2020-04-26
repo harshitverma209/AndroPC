@@ -107,15 +107,12 @@ public class DevicesActivity extends AppCompatActivity {
     };
 
     private void update() {
-        synchronized (deviceRecyclerView.getAdapter()){
-        deviceRecyclerView.getAdapter().notifyAll();
+        synchronized (dev){
+        dev.notifyDataSetChanged();
         Log.d("chech", "Notified");
 
         }
-        synchronized (deviceRecyclerView){
-            deviceRecyclerView.notifyAll();
-        }
-        deviceRecyclerView.setAdapter(dev);
+        
     }
 
     private void showToast(String s) {
