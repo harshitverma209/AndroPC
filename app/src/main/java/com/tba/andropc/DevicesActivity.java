@@ -107,8 +107,9 @@ public class DevicesActivity extends AppCompatActivity {
 
     private void update() {
         synchronized (deviceRecyclerView.getAdapter()){
-        deviceRecyclerView.getAdapter().notifyDataSetChanged();
+        deviceRecyclerView.getAdapter().notifyAll();
         Log.d("chech", "Notified");
+        deviceRecyclerView.notifyAll();
         }
     }
 
