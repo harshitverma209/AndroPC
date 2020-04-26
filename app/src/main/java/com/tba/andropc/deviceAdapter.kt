@@ -6,8 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class deviceAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private val mLayoutInflater by lazy { LayoutInflater.from(context) }
     var usersList = mutableListOf<String>()
+
+    private val mLayoutInflater by lazy { LayoutInflater.from(context) }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
