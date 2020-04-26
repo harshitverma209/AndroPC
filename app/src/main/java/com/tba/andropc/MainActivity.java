@@ -60,7 +60,7 @@ View trackpad;
 
                     }
                 }
-                return false;
+                return true;
             }
         });
 
