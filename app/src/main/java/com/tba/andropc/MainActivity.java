@@ -41,7 +41,8 @@ View trackpad;
                         break;
                     }
                     case MotionEvent.ACTION_MOVE: {
-
+                        newPosX=event.getX();
+                        newPosY=event.getY();
                         break;
                     }
                     default:{
