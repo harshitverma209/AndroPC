@@ -5,7 +5,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class deviceAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return
+        return UserViewHolder(mLayoutInflater.inflate(R.layout.main_data,parent,false))
+
     }
 
     override fun getItemCount(): Int {
