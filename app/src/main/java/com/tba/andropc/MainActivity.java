@@ -32,7 +32,7 @@ View trackpad;
         trackpad.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event){
+                switch(event.getAction()){
                     
                 }
                 return false;
