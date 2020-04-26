@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.tba.andropc.models.DeviceModel
+import kotlinx.android.synthetic.main.devicename.view.*
 
 class deviceAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    var deviceList = mutableListOf<String>()
+    var deviceList = mutableListOf<DeviceModel>()
 
     private val mLayoutInflater by lazy { LayoutInflater.from(context) }
 
@@ -27,8 +29,8 @@ class deviceAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     inner class DeviceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindData(s: String) {
-            TODO("Not yet implemented")
+        fun bindData(s: DeviceModel) {
+            itemView.name.text=getNa
         }
     }
 }
