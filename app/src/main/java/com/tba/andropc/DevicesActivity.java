@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.bluetooth.BluetoothAdapter;
 import android.os.Bundle;
 
+import java.util.UUID;
+
 public class DevicesActivity extends AppCompatActivity {
     private BluetoothAdapter BA;
     RecyclerView deviceList;
