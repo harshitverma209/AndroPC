@@ -59,7 +59,7 @@ public class DevicesActivity extends AppCompatActivity {
             } else if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                 //bluetooth device found
                 Log.d("chech","got it");
-                BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                BluetoothDevice device =  intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 
                 devicesList.add(device.getName()+"\n"+device.getAddress());
                 //showToast("Found device " + device.getName());
