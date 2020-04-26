@@ -38,6 +38,7 @@ View trackpad;
             public boolean onTouch(View v, MotionEvent event) {
                 switch(event.getAction()){
                     case MotionEvent.ACTION_DOWN: {
+                        Log.d("chech", "Down!");
                         posX=event.getX();
                         posY=event.getY();
                         break;
