@@ -11,11 +11,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.List;
 import java.util.UUID;
 
 public class DevicesActivity extends AppCompatActivity {
     private BluetoothAdapter bluetoothAdapter;
     RecyclerView deviceRecyclerView;
+    List
     public UUID uuid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
