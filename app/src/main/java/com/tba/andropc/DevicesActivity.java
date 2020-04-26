@@ -14,6 +14,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.tba.andropc.models.DeviceModel;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -21,7 +23,7 @@ import java.util.UUID;
 public class DevicesActivity extends AppCompatActivity {
     private BluetoothAdapter bluetoothAdapter;
     RecyclerView deviceRecyclerView;
-    private ArrayList<String> devicesList;
+    private ArrayList<DeviceModel> devicesList;
     public UUID uuid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
