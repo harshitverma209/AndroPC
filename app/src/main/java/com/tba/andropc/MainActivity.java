@@ -48,6 +48,7 @@ View trackpad;
                         movementInY=posY-newPosY;
                         posX=newPosX;
                         posY=newPosY;
+                        moveMouse(movementInX,movementInY);
                         break;
                     }
                     default:{
@@ -59,6 +60,10 @@ View trackpad;
         });
 
     }
+
+    private void moveMouse(float movementInX, float movementInY) {
+    }
+
     public void sendTextToPC()
     {
 
