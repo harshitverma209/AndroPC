@@ -34,13 +34,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
     <View
+        android:background="#000"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="@id/etText2Pc"
         app:layout_constraintEnd_toEndOf="@id/etText2Pc"
         app:layout_constraintTop_toBottomOf="@id/viewSubject"
         android:id="@+id/trackPad"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/btnLeftClick"/>
     <View
         android:layout_width="1dp"
         android:layout_height="1dp"
