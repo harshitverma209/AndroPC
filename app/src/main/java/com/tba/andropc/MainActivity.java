@@ -3,6 +3,7 @@ package com.tba.andropc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -62,6 +63,7 @@ View trackpad;
     }
 
     private void moveMouse(float movementInX, float movementInY) {
+        Log.d("chech", movementInX+","+movementInY);
     }
 
     public void sendTextToPC()
