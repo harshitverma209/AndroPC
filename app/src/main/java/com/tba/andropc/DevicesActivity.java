@@ -32,7 +32,9 @@ public class DevicesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_devices);
+        devicesList=new ArrayList<DeviceModel>();
 
+        
         deviceRecyclerView=findViewById(R.id.rec);
 
         dev= new DeviceAdapter(this, devicesList);
@@ -56,7 +58,7 @@ public class DevicesActivity extends AppCompatActivity {
         registerReceiver(mReceiver, filter);
 
         scanDevices();
-        devicesList=new ArrayList<DeviceModel>();
+
 
 
 
