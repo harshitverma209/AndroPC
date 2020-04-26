@@ -33,7 +33,13 @@ View trackpad;
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch(event.getAction()){
-                    
+                    case MotionEvent.ACTION_DOWN: {
+                        break;
+                    }
+                    case MotionEvent.ACTION_MOVE:{
+                        
+                        break;
+                    }
                 }
                 return false;
             }
