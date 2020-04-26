@@ -23,6 +23,7 @@ class deviceAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHol
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
+        (holder as UserViewHolder).bindData(usersList[position])
     }
 
     inner class DeviceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
