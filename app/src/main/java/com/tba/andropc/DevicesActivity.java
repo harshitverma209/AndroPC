@@ -109,7 +109,10 @@ public class DevicesActivity extends AppCompatActivity {
         synchronized (deviceRecyclerView.getAdapter()){
         deviceRecyclerView.getAdapter().notifyAll();
         Log.d("chech", "Notified");
-        deviceRecyclerView.notifyAll();
+
+        }
+        synchronized (deviceRecyclerView){
+            deviceRecyclerView.notifyAll();
         }
     }
 
