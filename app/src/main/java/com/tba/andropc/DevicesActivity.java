@@ -13,6 +13,7 @@ public class DevicesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_devices);
+        BA=BluetoothAdapter.getDefaultAdapter();
         deviceList=new RecyclerView(this,);
     }
 }
