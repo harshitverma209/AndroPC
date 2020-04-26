@@ -2,6 +2,7 @@ package com.tba.andropc;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.bluetooth.BluetoothAdapter;
@@ -25,14 +26,22 @@ public class DevicesActivity extends AppCompatActivity {
     RecyclerView deviceRecyclerView;
     private ArrayList<DeviceModel> devicesList;
     public UUID uuid;
-    deviceAdapter dev;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_devices);
 
-        dev=deviceAdapter(this);
+        deviceRecyclerView=findViewById(R.id.rec);
+
+        deviceAdapter dev= new deviceAdapter(this);
+        re.setAdapter(ad);
+
+        LinearLayoutManager lm = new LinearLayoutManager(this);
+        lm.setOrientation(RecyclerView.VERTICAL);
+
+        re.setLayoutManager(lm);
+
         bluetoothAdapter =BluetoothAdapter.getDefaultAdapter();
         enableBT();
 
