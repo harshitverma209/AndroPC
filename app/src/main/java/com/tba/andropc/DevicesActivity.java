@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,12 +59,17 @@ public class DevicesActivity extends AppCompatActivity {
 
             } else if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                 //bluetooth device found
-                Log.d("chech","got it");
+
                 BluetoothDevice device =  intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 
                 devicesList.add(device.getName()+"\n"+device.getAddress());
-                //showToast("Found device " + device.getName());
+                Log.d("chech","got it");
+                showToast("Found device " + device.getName());
             }
         }
     };
+
+    private void showToast(String s) {
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+    }
 }
