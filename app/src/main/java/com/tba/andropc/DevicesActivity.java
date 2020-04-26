@@ -61,7 +61,7 @@ public class DevicesActivity extends AppCompatActivity {
                 Log.d("chech","got it");
                 BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 
-                deviceList.add(device.getName()+"\n"+device.getAddress());
+                devicesList.add(device.getName()+"\n"+device.getAddress());
                 //showToast("Found device " + device.getName());
             }
         }
