@@ -34,7 +34,7 @@ public class DevicesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_devices);
         devicesList=new ArrayList<DeviceModel>();
 
-        
+
         deviceRecyclerView=findViewById(R.id.rec);
 
         dev= new DeviceAdapter(this, devicesList);
@@ -111,8 +111,8 @@ public class DevicesActivity extends AppCompatActivity {
     private void update() {
         synchronized (dev){
         dev.notifyDataSetChanged();
-        dev.notify();
-        Log.d("chech", "Notified");
+//        dev.notify();
+//        Log.d("chech", "Notified");
 
         }
 
