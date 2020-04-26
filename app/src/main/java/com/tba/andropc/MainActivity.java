@@ -28,6 +28,6 @@ String connect;
     }
     public void sendTextToPC()
     {
-        
+
     }
 }
