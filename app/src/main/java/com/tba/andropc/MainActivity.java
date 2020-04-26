@@ -31,6 +31,7 @@ View trackpad;
         });
         trackpad.setOnTouchListener(new View.OnTouchListener() {
             float posX,posY;
+            float newPosX,newPosY;
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch(event.getAction()){
