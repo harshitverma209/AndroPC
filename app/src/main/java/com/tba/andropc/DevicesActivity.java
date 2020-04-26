@@ -108,6 +108,7 @@ public class DevicesActivity extends AppCompatActivity {
     private void update() {
         synchronized (deviceRecyclerView.getAdapter()){
         deviceRecyclerView.getAdapter().notifyDataSetChanged();
+        Log.d("chech", "Notified");
         }
     }
 
