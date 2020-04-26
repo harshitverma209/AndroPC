@@ -30,10 +30,13 @@ View trackpad;
             }
         });
         trackpad.setOnTouchListener(new View.OnTouchListener() {
+            float posX,posY;
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch(event.getAction()){
                     case MotionEvent.ACTION_DOWN: {
+                        posX=event.getX();
+                        posY=event.getY();
                         break;
                     }
                     case MotionEvent.ACTION_MOVE: {
@@ -41,7 +44,7 @@ View trackpad;
                         break;
                     }
                     default:{
-                        
+
                     }
                 }
                 return false;
