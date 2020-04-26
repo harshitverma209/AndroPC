@@ -9,6 +9,7 @@ import android.os.Bundle;
 public class DevicesActivity extends AppCompatActivity {
     private BluetoothAdapter BA;
     RecyclerView deviceList;
+    public UUID uuid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
