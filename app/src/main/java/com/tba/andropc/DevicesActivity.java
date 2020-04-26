@@ -106,7 +106,7 @@ public class DevicesActivity extends AppCompatActivity {
     };
 
     private void update() {
-        not
+        deviceRecyclerView.getAdapter().notify();
     }
 
     private void showToast(String s) {
