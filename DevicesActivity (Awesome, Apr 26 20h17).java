@@ -35,12 +35,12 @@ public class DevicesActivity extends AppCompatActivity {
         deviceRecyclerView=findViewById(R.id.rec);
 
         deviceAdapter dev= new deviceAdapter(this);
-        deviceRecyclerView.setAdapter(dev);
+        deviceRecyclerView.setAdapter(deviceAdapter);
 
         LinearLayoutManager lm = new LinearLayoutManager(this);
         lm.setOrientation(RecyclerView.VERTICAL);
 
-        deviceRecyclerView.setLayoutManager(lm);
+        re.setLayoutManager(lm);
 
         bluetoothAdapter =BluetoothAdapter.getDefaultAdapter();
         enableBT();
