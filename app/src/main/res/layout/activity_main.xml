@@ -11,7 +11,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/etMaibn"
+        android:id="@+id/etText2Pc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,9 +22,9 @@
         android:layout_marginTop="8dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/etMaibn"
-        app:layout_constraintStart_toStartOf="@id/etMaibn"
-        app:layout_constraintEnd_toEndOf="@id/etMaibn"
-        android:id="@+id/btnMain"/>
+        app:layout_constraintTop_toBottomOf="@id/etText2Pc"
+        app:layout_constraintStart_toStartOf="@id/etText2Pc"
+        app:layout_constraintEnd_toEndOf="@id/etText2Pc"
+        android:id="@+id/btnSend"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

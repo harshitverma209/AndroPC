@@ -15,8 +15,8 @@ String connect;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        etMain=findViewById(R.id.etMaibn);
-        btnMain=findViewById(R.id.btnMain);
+        etMain=findViewById(R.id.etText2Pc);
+        btnMain=findViewById(R.id.btnSend);
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
