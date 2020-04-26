@@ -15,7 +15,7 @@ import java.util.UUID;
 
 public class DevicesActivity extends AppCompatActivity {
     private BluetoothAdapter bluetoothAdapter;
-    RecyclerView deviceList;
+    RecyclerView deviceRecyclerView;
     public UUID uuid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class DevicesActivity extends AppCompatActivity {
         bluetoothAdapter =BluetoothAdapter.getDefaultAdapter();
         uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
         enableBT();
-//        deviceList=new RecyclerView(this,);
+
     }
     private void scanDevices(){
         bluetoothAdapter.startDiscovery();
@@ -58,7 +58,7 @@ public class DevicesActivity extends AppCompatActivity {
                 Log.d("chech","got it");
                 BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 
-//                s.add(device.getName()+"\n"+device.getAddress());
+                device.add(device.getName()+"\n"+device.getAddress());
                 //showToast("Found device " + device.getName());
             }
         }
