@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 EditText etMain;
-Button btnMain;
+Button btnMain,LeftClick,RightClick;
 String connect;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,9 @@ String connect;
         setContentView(R.layout.activity_main);
         etMain=findViewById(R.id.etText2Pc);
         btnMain=findViewById(R.id.btnSend);
+        LeftClick=findViewById(R.id.btnLeftClick);
+        RightClick=findViewById(R.id.btnRightClick);
+
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
