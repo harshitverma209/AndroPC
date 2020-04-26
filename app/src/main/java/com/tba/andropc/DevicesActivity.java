@@ -25,6 +25,7 @@ public class DevicesActivity extends AppCompatActivity {
     RecyclerView deviceRecyclerView;
     private ArrayList<DeviceModel> devicesList;
     public UUID uuid;
+    deviceAdapter dev;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
