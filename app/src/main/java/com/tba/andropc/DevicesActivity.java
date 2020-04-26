@@ -22,6 +22,6 @@ public class DevicesActivity extends AppCompatActivity {
 //        deviceList=new RecyclerView(this,);
     }
     private void scanDevices(){
-        
+        BA.startDiscovery();
     }
 }
