@@ -12,7 +12,7 @@ class deviceAdapter(context: Context): RecyclerView.Adapter<RecyclerView.ViewHol
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return UserViewHolder(mLayoutInflater.inflate(R.layout.main_data,parent,false))
+        return UserViewHolder(mLayoutInflater.inflate(R.layout.,parent,false))
 
     }
 

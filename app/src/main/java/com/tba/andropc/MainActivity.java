@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 EditText etMain;
 Button btnMain,LeftClick,RightClick;
 String connect;
+View trackpad;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,7 @@ String connect;
         btnMain=findViewById(R.id.btnSend);
         LeftClick=findViewById(R.id.btnLeftClick);
         RightClick=findViewById(R.id.btnRightClick);
+        trackpad=findViewById(R.id.trackPad);
 
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
