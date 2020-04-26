@@ -46,6 +46,8 @@ View trackpad;
                         newPosY=event.getY();
                         movementInX=posX-newPosX;
                         movementInY=posY-newPosY;
+                        posX=newPosX;
+                        posY=newPosY;
                         break;
                     }
                     default:{
