@@ -100,7 +100,7 @@ public class DevicesActivity extends AppCompatActivity {
                 devicesList.add(deviceModel);
                 Log.d("chech","got it");
                 showToast("Found device " + device.getName());
-//                update();
+                update();
             }
         }
     };
