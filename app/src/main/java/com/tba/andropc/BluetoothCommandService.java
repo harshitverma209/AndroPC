@@ -34,6 +34,11 @@ public class BluetoothCommandService extends Service {
     public static final int STATE_CONNECTING = 2; // now initiating an outgoing connection
     public static final int STATE_CONNECTED = 3;  // now connected to a remote device
 
+    // Constants that indicate command to computer
+    public static final int EXIT_CMD = -1;
+    public static final int VOL_UP = 1;
+    public static final int VOL_DOWN = 2;
+    public static final int MOUSE_MOVE = 3;
     /**
      * Constructor. Prepares a new BluetoothChat session.
      * @param context  The UI Activity Context
