@@ -60,7 +60,7 @@ public class BluetoothCommandService extends Service {
         mState = state;
 
         // Give the new state to the Handler so the UI Activity can update
-        mHandler.obtainMessage(RemoteBluetooth.MESSAGE_STATE_CHANGE, state, -1).sendToTarget();
+        mHandler.obtainMessage(ActionSelectionActivity.MESSAGE_STATE_CHANGE, state, -1).sendToTarget();
     }
 
     /**
@@ -124,9 +124,9 @@ public class BluetoothCommandService extends Service {
         mConnectedThread.start();
 
         // Send the name of the connected device back to the UI Activity
-        Message msg = mHandler.obtainMessage(RemoteBluetooth.MESSAGE_DEVICE_NAME);
+        Message msg = mHandler.obtainMessage(ActionSelectionActivity.MESSAGE_DEVICE_NAME);
         Bundle bundle = new Bundle();
-        bundle.putString(RemoteBluetooth.DEVICE_NAME, device.getName());
+        bundle.putString(ActionSelectionActivity.DEVICE_NAME, device.getName());
         msg.setData(bundle);
         mHandler.sendMessage(msg);
 
@@ -185,9 +185,9 @@ public class BluetoothCommandService extends Service {
         setState(STATE_LISTEN);
 
         // Send a failure message back to the Activity
-        Message msg = mHandler.obtainMessage(RemoteBluetooth.MESSAGE_TOAST);
+        Message msg = mHandler.obtainMessage(ActionSelectionActivity.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
-        bundle.putString(RemoteBluetooth.TOAST, "Unable to connect device");
+        bundle.putString(ActionSelectionActivity.TOAST, "Unable to connect device");
         msg.setData(bundle);
         mHandler.sendMessage(msg);
     }
@@ -199,9 +199,9 @@ public class BluetoothCommandService extends Service {
 //        mConnectionLostCount++;
 //        if (mConnectionLostCount < 3) {
 //        	// Send a reconnect message back to the Activity
-//	        Message msg = mHandler.obtainMessage(RemoteBluetooth.MESSAGE_TOAST);
+//	        Message msg = mHandler.obtainMessage(ActionSelectionActivity.MESSAGE_TOAST);
 //	        Bundle bundle = new Bundle();
-//	        bundle.putString(RemoteBluetooth.TOAST, "Device connection was lost. Reconnecting...");
+//	        bundle.putString(ActionSelectionActivity.TOAST, "Device connection was lost. Reconnecting...");
 //	        msg.setData(bundle);
 //	        mHandler.sendMessage(msg);
 //
@@ -209,9 +209,9 @@ public class BluetoothCommandService extends Service {
 //        } else {
         setState(STATE_LISTEN);
         // Send a failure message back to the Activity
-        Message msg = mHandler.obtainMessage(RemoteBluetooth.MESSAGE_TOAST);
+        Message msg = mHandler.obtainMessage(ActionSelectionActivity.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
-        bundle.putString(RemoteBluetooth.TOAST, "Device connection was lost");
+        bundle.putString(ActionSelectionActivity.TOAST, "Device connection was lost");
         msg.setData(bundle);
         mHandler.sendMessage(msg);
 //        }
@@ -321,7 +321,7 @@ public class BluetoothCommandService extends Service {
                     int bytes = mmInStream.read(buffer);
 
                     // Send the obtained bytes to the UI Activity
-                    mHandler.obtainMessage(RemoteBluetooth.MESSAGE_READ, bytes, -1, buffer)
+                    mHandler.obtainMessage(ActionSelectionActivity.MESSAGE_READ, bytes, -1, buffer)
                             .sendToTarget();
                 } catch (IOException e) {
                     Log.e(TAG, "disconnected", e);
