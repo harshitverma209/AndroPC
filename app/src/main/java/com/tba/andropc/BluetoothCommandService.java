@@ -18,6 +18,7 @@ public class BluetoothCommandService {
     private static UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private static BluetoothAdapter bluetoothAdapter;
     private static BluetoothSocket bluetoothSocket;
+    private static OutputStream out;
 
     public BluetoothCommandService(Context context){
         bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
@@ -31,6 +32,7 @@ public class BluetoothCommandService {
         try {
             bluetoothSocket=device.createRfcommSocketToServiceRecord(uuid);
             bluetoothSocket.connect();
+            out=bluetoothSocket.getOutputStream();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -53,6 +55,6 @@ public class BluetoothCommandService {
     }
 
     public static void write(byte[] bytes) {
-        
+        bluetoothSocket.
     }
 }
