@@ -71,6 +71,7 @@ View trackpad;
 
     private void moveMouse(float movementInX, float movementInY) {
         Log.d("chech", movementInX+","+movementInY);
+        BluetoothCommandService.moveMouse(movementInX,movementInY);
     }
 
     public void sendTextToPC()
