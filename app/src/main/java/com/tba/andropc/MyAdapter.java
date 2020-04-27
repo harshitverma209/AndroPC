@@ -9,7 +9,8 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+
+        return DeviceViewHolder(mLayoutInflater.inflate(R.layout.devicename, parent, false))
     }
 
     @Override
