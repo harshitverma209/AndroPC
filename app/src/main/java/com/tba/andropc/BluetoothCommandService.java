@@ -76,4 +76,7 @@ public class BluetoothCommandService {
             e.printStackTrace();
         }
     }
+
+    public static void moveMouse(float movementInX, float movementInY) {
+    }
 }
