@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 
 import java.io.IOException;
@@ -17,7 +19,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.UUID;
 
-public class BluetoothCommandService {
+public class BluetoothCommandService implements Parcelable {
     private static final String TAG = "BluetoothCommandService";
     private static final boolean D = true;
     UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
@@ -215,6 +217,16 @@ public class BluetoothCommandService {
         msg.setData(bundle);
         mHandler.sendMessage(msg);
 //        }
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
     }
 
     /**
