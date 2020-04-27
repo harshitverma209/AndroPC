@@ -14,7 +14,6 @@ EditText etMain;
 Button btnMain,LeftClick,RightClick;
 String connect;
 View trackpad;
-BluetoothCommandService bluetoothCommandService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +24,6 @@ BluetoothCommandService bluetoothCommandService;
         RightClick=findViewById(R.id.btnRightClick);
         trackpad=findViewById(R.id.trackPad);
 
-        bluetoothCommandService=new BluetoothCommandService(this);
 
 
 
@@ -78,6 +76,6 @@ BluetoothCommandService bluetoothCommandService;
     public void sendTextToPC()
     {
         String text4PC=etMain.getText().toString();
-        bluetoothCommandService.write(text4PC.getBytes());
+        BluetoothCommandService.write(text4PC.getBytes());
     }
 }
