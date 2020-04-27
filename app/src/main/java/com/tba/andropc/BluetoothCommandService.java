@@ -252,6 +252,7 @@ public class BluetoothCommandService {
                 // This is a blocking call and will only return on a
                 // successful connection or an exception
                 mmSocket.connect();
+                Log
             } catch (IOException e) {
                 connectionFailed();
                 // Close the socket
