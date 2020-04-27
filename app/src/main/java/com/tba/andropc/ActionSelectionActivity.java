@@ -44,7 +44,8 @@ public class ActionSelectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_action_selection);
         setupCommand();
-
+        Intent intent=getIntent();
+        intent.getStringExtra("DeviceMAC");
 
 
         act_trackpad=findViewById(R.id.act_trackpad);
