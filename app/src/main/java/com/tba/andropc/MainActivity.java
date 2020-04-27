@@ -3,13 +3,15 @@ package com.tba.andropc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Parcelable {
 EditText etMain;
 Button btnMain,LeftClick,RightClick;
 String connect;
@@ -72,6 +74,16 @@ View trackpad;
 
     public void sendTextToPC()
     {
+
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
 
     }
 }
