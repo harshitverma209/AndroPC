@@ -33,6 +33,9 @@ public class BluetoothCommandService {
     public static void connect(BluetoothDevice device){
         try {
             bluetoothSocket=device.createRfcommSocketToServiceRecord(uuid);
+            if(bluetoothSocket!=null){
+                bluetoothSocket.close();
+            }
             bluetoothSocket.connect();
             out=bluetoothSocket.getOutputStream();
         } catch (IOException e) {
