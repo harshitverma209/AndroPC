@@ -15,14 +15,14 @@ import java.io.OutputStream;
 import java.util.UUID;
 
 public class BluetoothCommandService {
-    BluetoothAdapter bluetoothAdapter;
+    private static BluetoothAdapter bluetoothAdapter;
     public BluetoothCommandService(Context context){
         bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
     }
     public void connect(){
 
     }
-    private void scanDevices(){
+    public static void scanDevices(){
         bluetoothAdapter.startDiscovery();
     }
     public void enableBT(){
