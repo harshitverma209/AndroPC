@@ -34,7 +34,7 @@ public class ActionSelectionActivity extends AppCompatActivity {
     private BluetoothAdapter mBluetoothAdapter = null;
     // Member object for Bluetooth Command Service
     private BluetoothCommandService mCommandService = null;
-
+    private String deviceMac;
 
     Button act_trackpad;
 
@@ -45,8 +45,8 @@ public class ActionSelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_action_selection);
         setupCommand();
         Intent intent=getIntent();
-        intent.getStringExtra("DeviceMAC");
 
+        deviceMac=intent.getStringExtra("DeviceMAC");
 
         act_trackpad=findViewById(R.id.act_trackpad);
         act_trackpad.setOnClickListener(new View.OnClickListener() {
