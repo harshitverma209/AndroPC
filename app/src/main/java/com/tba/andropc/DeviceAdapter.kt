@@ -32,12 +32,12 @@ class DeviceAdapter(context: Context, deviceModel: ArrayList<DeviceModel>): Recy
         (holder as DeviceViewHolder).bindData(deviceList[position])
     }
 
-    inner class DeviceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class DeviceViewHolder(context: Context,itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindData(dev: DeviceModel) {
             itemView.name.text= dev.deviceName;
             itemView.address.text=dev.deviceMac;
             itemView.setOnClickListener {
-                val intent = Intent(this,ActionSelectionActivity::class.java)
+                val intent = Intent(this.context,ActionSelectionActivity::class.java)
                 startActivity(intent)
             }
         }
