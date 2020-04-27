@@ -50,7 +50,7 @@ public class ActionSelectionActivity extends AppCompatActivity {
         deviceMac=intent.getStringExtra("deviceMac");
         BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(deviceMac);
 //        mCommandService.connect(device);
-        
+
         act_trackpad=findViewById(R.id.act_trackpad);
         act_trackpad.setOnClickListener(new View.OnClickListener() {
             @Override

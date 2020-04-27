@@ -20,8 +20,8 @@ import java.util.UUID;
 public class BluetoothCommandService {
     private static final String TAG = "BluetoothCommandService";
     private static final boolean D = true;
-
-    private static final UUID MY_UUID = UUID.fromString("04c6093b-0000-1000-8000-00805f9b34fb");
+    UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+//    private static final UUID MY_UUID = UUID.fromString("04c6093b-0000-1000-8000-00805f9b34fb");
     private final BluetoothAdapter mAdapter;
     private final Handler mHandler;
     private ConnectThread mConnectThread;
