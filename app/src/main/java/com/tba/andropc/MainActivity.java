@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendTextToPC()
     {
+        BluetoothCommandService.setMode(KEYBOARD_MODE);
         String text4PC=etMain.getText().toString();
         BluetoothCommandService.write(text4PC);
     }
