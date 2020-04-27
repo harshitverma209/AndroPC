@@ -103,10 +103,10 @@ public class BluetoothCommandService implements Parcelable {
 
         setState(STATE_LISTEN);
 
-        mAdapter = BluetoothAdapter.getDefaultAdapter();
-        mState = STATE_NONE;
+//        mAdapter = BluetoothAdapter.getDefaultAdapter();
+//        mState = STATE_NONE;
         //mConnectionLostCount = 0;
-        mHandler = this.handler;
+//        mHandler = this.handler;
 
 
     }
