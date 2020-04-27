@@ -69,7 +69,11 @@ public class BluetoothCommandService {
         }
     }
 
-    public static void setMode(String mode) {
-        out.write(mode.getBytes());
+    public static void setMode(int mode) {
+        try {
+            out.write(mode);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
