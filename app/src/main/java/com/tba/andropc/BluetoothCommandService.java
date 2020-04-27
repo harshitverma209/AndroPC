@@ -51,4 +51,7 @@ public class BluetoothCommandService {
             mBluetoothAdapter.disable();
         }
     }
+
+    public static void write(byte[] bytes) {
+    }
 }
