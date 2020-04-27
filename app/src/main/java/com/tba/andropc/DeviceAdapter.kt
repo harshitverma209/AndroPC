@@ -1,5 +1,6 @@
 package com.tba.andropc
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -36,7 +37,7 @@ class DeviceAdapter(context: Context, deviceModel: ArrayList<DeviceModel>): Recy
             itemView.name.text= dev.deviceName;
             itemView.address.text=dev.deviceMac;
             itemView.setOnClickListener {
-                val intent = Intent(@DeviceAdapter,ActionSelectionActivity::class.java)
+                val intent = Intent(,ActionSelectionActivity::class.java)
                 startActivity(intent)
             }
         }
