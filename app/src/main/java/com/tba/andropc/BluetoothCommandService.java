@@ -53,6 +53,6 @@ public class BluetoothCommandService {
     }
 
     public static void write(byte[] bytes) {
-
+        
     }
 }
