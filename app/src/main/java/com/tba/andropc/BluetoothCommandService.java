@@ -69,7 +69,7 @@ public class BluetoothCommandService {
         }
     }
 
-    public static void moveMouse(float movementInX, float movementInY) {
-        out.
+    public static void setMode(String mode) {
+        out.write(mode.getBytes());
     }
 }
