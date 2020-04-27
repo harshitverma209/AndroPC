@@ -78,5 +78,7 @@ public class BluetoothCommandService {
     }
 
     public static void moveMouse(float movementInX, float movementInY) {
+        String movement="("+movementInX+","+movementInY+")";
+
     }
 }
