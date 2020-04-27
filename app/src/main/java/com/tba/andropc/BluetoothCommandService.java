@@ -17,6 +17,6 @@ import java.util.UUID;
 public class BluetoothCommandService {
     BluetoothAdapter bluetoothAdapter;
     public BluetoothCommandService(Context context){
-        
+        bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
     }
 }
