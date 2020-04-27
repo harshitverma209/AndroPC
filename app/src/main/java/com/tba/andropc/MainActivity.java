@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("chech", "Down!");
                         posX=event.getX();
                         posY=event.getY();
-                        BluetoothCommandService.setMode(KEYBOARD_MODE);
+                        BluetoothCommandService.setMode(MOUSE_MODE);
                         break;
                     }
                     case MotionEvent.ACTION_MOVE: {
@@ -62,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                         posY=newPosY;
                         moveMouse(movementInX,movementInY);
                         break;
+                    }
+                    case MotionEvent.ACTION_UP:{
+                        BluetoothCommandService.setMode();
                     }
                     default:{
 
