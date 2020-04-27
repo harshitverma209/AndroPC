@@ -19,4 +19,5 @@ public class BluetoothCommandService {
     public BluetoothCommandService(Context context){
         bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
     }
+    
 }
