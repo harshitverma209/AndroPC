@@ -46,7 +46,7 @@ public class DevicesActivity extends AppCompatActivity {
         deviceRecyclerView.setLayoutManager(lm);
 
         bluetoothAdapter =BluetoothAdapter.getDefaultAdapter();
-        enableBT();
+        BluetoothCommandService.enableBT();
 
         uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
         IntentFilter filter = new IntentFilter();
