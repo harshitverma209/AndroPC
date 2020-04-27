@@ -111,7 +111,7 @@ public class DevicesActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        disableBT();
+        BluetoothCommandService.disableBT();
         unregisterReceiver(mReceiver);
     }
 }
