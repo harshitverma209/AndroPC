@@ -31,6 +31,7 @@ public class BluetoothCommandService {
     }
 
     public static void connect(BluetoothDevice device){
+        bluetoothAdapter.cancelDiscovery();
         try {
 
             if(bluetoothSocket!=null){
