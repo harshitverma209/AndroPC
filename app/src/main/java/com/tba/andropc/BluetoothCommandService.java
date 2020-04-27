@@ -24,7 +24,7 @@ public class BluetoothCommandService {
         return bluetoothAdapter;
     }
 
-    public void connect(){
+    public static void connect(){
 
     }
     public static void scanDevices(){
