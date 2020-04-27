@@ -33,7 +33,9 @@ class DeviceAdapter(context: Context, deviceModel: ArrayList<DeviceModel>): Recy
         fun bindData(dev: DeviceModel) {
             itemView.name.text= dev.deviceName;
             itemView.address.text=dev.deviceMac;
-
+            itemView.setOnClickListener {
+                
+            }
         }
     }
 }
