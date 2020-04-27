@@ -57,7 +57,7 @@ public class DevicesActivity extends AppCompatActivity {
 
         registerReceiver(mReceiver, filter);
 
-        scanDevices();
+        BluetoothCommandService.scanDevices();
 
 
 
