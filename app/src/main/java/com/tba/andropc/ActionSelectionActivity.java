@@ -46,7 +46,7 @@ public class ActionSelectionActivity extends AppCompatActivity {
         setupCommand();
         Intent intent=getIntent();
 
-
+        mBluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
         deviceMac=intent.getStringExtra("DeviceMAC");
         BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(deviceMac);
         mCommandService.connect(device);
