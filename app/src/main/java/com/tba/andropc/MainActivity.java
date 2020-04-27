@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnMain,LeftClick,RightClick;
     String connect;
     View trackpad;
+    private int NO_MODE=0;
     private int KEYBOARD_MODE=1;
     private int MOUSE_MODE=2;
 
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case MotionEvent.ACTION_UP:{
-                        BluetoothCommandService.setMode();
+                        BluetoothCommandService.setMode(NO_MODE);
                     }
                     default:{
 
