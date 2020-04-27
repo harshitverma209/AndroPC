@@ -10,10 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-EditText etMain;
-Button btnMain,LeftClick,RightClick;
-String connect;
-View trackpad;
+    EditText etMain;
+    Button btnMain,LeftClick,RightClick;
+    String connect;
+    View trackpad;
+    private int KEYBOARD_MODE=1;
+    private int MOUSE_MODE=2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +49,7 @@ View trackpad;
                         Log.d("chech", "Down!");
                         posX=event.getX();
                         posY=event.getY();
+                        BluetoothCommandService.setMode(KEYBOARD_MODE);
                         break;
                     }
                     case MotionEvent.ACTION_MOVE: {
@@ -71,10 +75,12 @@ View trackpad;
 
     private void moveMouse(float movementInX, float movementInY) {
         Log.d("chech", movementInX+","+movementInY);
+        BluetoothCommandService.moveMouse(movementInX,movementInY);
     }
 
     public void sendTextToPC()
     {
+        BluetoothCommandService.setMode(KEYBOARD_MODE);
         String text4PC=etMain.getText().toString();
         BluetoothCommandService.write(text4PC);
     }

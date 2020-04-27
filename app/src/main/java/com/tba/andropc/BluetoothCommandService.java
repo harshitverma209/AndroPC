@@ -31,7 +31,12 @@ public class BluetoothCommandService {
     }
 
     public static void connect(BluetoothDevice device){
+        bluetoothAdapter.cancelDiscovery();
         try {
+
+            if(bluetoothSocket!=null){
+                bluetoothSocket.close();
+            }
             bluetoothSocket=device.createRfcommSocketToServiceRecord(uuid);
             bluetoothSocket.connect();
             out=bluetoothSocket.getOutputStream();
@@ -56,8 +61,26 @@ public class BluetoothCommandService {
     }
 
     public static void write(String text) {
+        text=text+'\0';
         try {
             out.write(text.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void setMode(int mode) {
+        try {
+            out.write(mode);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void moveMouse(float movementInX, float movementInY) {
+        String movement="("+movementInX+","+movementInY+")";
+        try {
+            out.write(movement.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
