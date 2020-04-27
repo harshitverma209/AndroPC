@@ -61,7 +61,7 @@ public class BluetoothCommandService {
     }
 
     public static void write(String text) {
-        text=text+"\0";
+        text=text+'\0';
         try {
             out.write(text.getBytes());
         } catch (IOException e) {
