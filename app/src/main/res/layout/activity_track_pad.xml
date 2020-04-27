@@ -4,6 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
     tools:context=".TrackPad">
+    <View
+        android:background="@drawable/track"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/trackPad"
+        app:layout_constraintBottom_toTopOf="@id/btnLeftClick"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/viewsubjectbtn"/>
+    <Button
+        android:id="@+id/btnLeftClick"
+        android:background="@drawable/btnshaperight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/trackPad"
+        app:layout_constraintEnd_toStartOf="@id/viewsubjectbtn"/>
+    <Button
+        android:id="@+id/btnRightClick"
+        android:layout_width="0dp"
+        android:background="@drawable/btnshape"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/btnLeftClick"
+        app:layout_constraintBottom_toBottomOf="@id/btnLeftClick"
+        app:layout_constraintStart_toEndOf="@id/viewsubjectbtn"
+        app:layout_constraintEnd_toEndOf="@id/trackPad"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
