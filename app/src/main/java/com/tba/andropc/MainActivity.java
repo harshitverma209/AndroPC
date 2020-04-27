@@ -14,6 +14,7 @@ EditText etMain;
 Button btnMain,LeftClick,RightClick;
 String connect;
 View trackpad;
+BluetoothCommandService bluetoothCommandService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,10 @@ View trackpad;
         LeftClick=findViewById(R.id.btnLeftClick);
         RightClick=findViewById(R.id.btnRightClick);
         trackpad=findViewById(R.id.trackPad);
+
+        bluetoothCommandService=getIntent().getParcelableExtra("BluetoothCommandService");
+
+
 
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +77,7 @@ View trackpad;
 
     public void sendTextToPC()
     {
-        etMain
+        String text4PC=etMain.getText().toString();
+
     }
 }
