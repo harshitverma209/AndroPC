@@ -72,6 +72,6 @@ View trackpad;
 
     public void sendTextToPC()
     {
-
+        etMain
     }
 }
