@@ -14,6 +14,8 @@ import java.io.OutputStream;
 import java.util.UUID;
 
 public class BluetoothCommandService extends Service {
+    private static final String TAG = "BluetoothCommandService";
+    private static final boolean D = true;
 
     private static final UUID MY_UUID = UUID.fromString("04c6093b-0000-1000-8000-00805f9b34fb");
     private final BluetoothAdapter mAdapter;
