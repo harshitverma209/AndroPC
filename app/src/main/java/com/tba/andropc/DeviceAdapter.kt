@@ -35,7 +35,7 @@ class DeviceAdapter(context: Context, deviceModel: ArrayList<DeviceModel>): Recy
             itemView.name.text= dev.deviceName;
             itemView.address.text=dev.deviceMac;
             itemView.setOnClickListener {
-                var intent=Intent(this,)
+                var intent=Intent(this,ActionSelectionActivity::class.java)
             }
         }
     }
