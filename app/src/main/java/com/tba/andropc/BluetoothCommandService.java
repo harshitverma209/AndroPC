@@ -255,6 +255,7 @@ public class BluetoothCommandService {
                 Log.d("chech","connected");
             } catch (IOException e) {
                 connectionFailed();
+                Log.e(TAG, e.toString());
                 // Close the socket
                 try {
                     mmSocket.close();
