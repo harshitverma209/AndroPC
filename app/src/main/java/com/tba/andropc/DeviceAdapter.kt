@@ -36,9 +36,7 @@ class DeviceAdapter(context: Context, deviceModel: ArrayList<DeviceModel>): Recy
             itemView.name.text= dev.deviceName;
             itemView.address.text=dev.deviceMac;
             itemView.setOnClickListener {
-                val i = Intent(startActivity(this), BluetoothCommandService::class.java)
-                i.putExtra("a", 1)
-                startActivity(i)
+                val intent =  
             }
         }
     }
