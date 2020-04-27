@@ -54,7 +54,7 @@ public class BluetoothCommandService {
         }
     }
 
-    public static void write(byte[] bytes) {
-        bluetoothSocket.
+    public static void write(String text) {
+        out.write(text.getBytes());
     }
 }
