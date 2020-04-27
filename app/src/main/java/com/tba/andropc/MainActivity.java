@@ -76,6 +76,6 @@ View trackpad;
     public void sendTextToPC()
     {
         String text4PC=etMain.getText().toString();
-        BluetoothCommandService.write(text4PC.getBytes());
+        BluetoothCommandService.write(text4PC);
     }
 }
