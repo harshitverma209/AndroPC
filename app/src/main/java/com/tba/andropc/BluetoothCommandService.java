@@ -15,6 +15,7 @@ import java.io.OutputStream;
 import java.util.UUID;
 
 public class BluetoothCommandService {
+    UUID=
     private static BluetoothAdapter bluetoothAdapter;
     private static BluetoothSocket bluetoothSocket;
 
