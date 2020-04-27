@@ -39,7 +39,7 @@ class DeviceAdapter(context: Context, deviceModel: ArrayList<DeviceModel>): Recy
             itemView.address.text=dev.deviceMac;
             itemView.setOnClickListener {
                 val intent = Intent(context,ActionSelectionActivity::class.java)
-                startActivity(intent)
+                context.startActivity(intent)
             }
         }
     }
