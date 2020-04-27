@@ -6,6 +6,7 @@ import android.os.IBinder;
 
 public class BluetoothCommandService extends Service {
     public BluetoothCommandService() {
+        
     }
 
     @Override
