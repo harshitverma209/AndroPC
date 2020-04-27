@@ -28,7 +28,7 @@ public class BluetoothCommandService {
     }
 
     public static void connect(BluetoothDevice device){
-        bluetoothSocket=device.createRfcommSocketToServiceRecord(UUID);
+        bluetoothSocket=device.createRfcommSocketToServiceRecord(uuid);
     }
     public static void scanDevices(){
         bluetoothAdapter.startDiscovery();
