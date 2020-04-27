@@ -61,10 +61,15 @@ public class BluetoothCommandService {
     }
 
     public static void write(String text) {
+        text="T"+text;
         try {
             out.write(text.getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void moveMouse(float movementInX, float movementInY) {
+        out.
     }
 }
