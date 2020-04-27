@@ -51,4 +51,8 @@ public class ActionSelectionActivity extends AppCompatActivity {
             }
         });
     }
+    private void setupCommand() {
+        // Initialize the BluetoothChatService to perform bluetooth connections
+        mCommandService = new BluetoothCommandService(this, mHandler);
+    }
 }
