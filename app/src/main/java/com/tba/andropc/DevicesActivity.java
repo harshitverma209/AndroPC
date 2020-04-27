@@ -32,6 +32,10 @@ public class DevicesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_devices);
+
+        BluetoothCommandService.init();
+
+
         devicesList=new ArrayList<DeviceModel>();
 
 
