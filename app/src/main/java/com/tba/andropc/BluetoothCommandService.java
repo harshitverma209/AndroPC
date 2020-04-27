@@ -10,8 +10,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.util.Log;
 
 import java.io.IOException;
@@ -19,13 +17,13 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.UUID;
 
-public class BluetoothCommandService implements Parcelable {
+public class BluetoothCommandService {
     private static final String TAG = "BluetoothCommandService";
     private static final boolean D = true;
     UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 //    private static final UUID MY_UUID = UUID.fromString("04c6093b-0000-1000-8000-00805f9b34fb");
-    private BluetoothAdapter mAdapter;
-    public  Handler mHandler;
+    private final BluetoothAdapter mAdapter;
+    private final Handler mHandler;
     private ConnectThread mConnectThread;
     private ConnectedThread mConnectedThread;
     private int mState;
@@ -52,24 +50,6 @@ public class BluetoothCommandService implements Parcelable {
         //mConnectionLostCount = 0;
         mHandler = handler;
     }
-
-    protected BluetoothCommandService(Parcel in) {
-        mState = in.readInt();
-//        mHandler= (Handler) in.readValue(getClass().getClassLoader());
-
-    }
-
-    public static final Creator<BluetoothCommandService> CREATOR = new Creator<BluetoothCommandService>() {
-        @Override
-        public BluetoothCommandService createFromParcel(Parcel in) {
-            return new BluetoothCommandService(in);
-        }
-
-        @Override
-        public BluetoothCommandService[] newArray(int size) {
-            return new BluetoothCommandService[size];
-        }
-    };
 
     /**
      * Set the current state of the chat connection
@@ -102,13 +82,6 @@ public class BluetoothCommandService implements Parcelable {
         if (mConnectedThread != null) {mConnectedThread.cancel(); mConnectedThread = null;}
 
         setState(STATE_LISTEN);
-
-//        mAdapter = BluetoothAdapter.getDefaultAdapter();
-//        mState = STATE_NONE;
-        //mConnectionLostCount = 0;
-//        mHandler = this.handler;
-
-
     }
 
     /**
@@ -242,16 +215,6 @@ public class BluetoothCommandService implements Parcelable {
         msg.setData(bundle);
         mHandler.sendMessage(msg);
 //        }
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeValue(this);
     }
 
     /**
