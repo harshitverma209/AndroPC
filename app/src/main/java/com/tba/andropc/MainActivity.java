@@ -32,7 +32,7 @@ BluetoothCommandService bluetoothCommandService;
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            connect=etMain.getText().toString();
+                sendTextToPC();
             }
         });
         trackpad.setOnTouchListener(new View.OnTouchListener() {
