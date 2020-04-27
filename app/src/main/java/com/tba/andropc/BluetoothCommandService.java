@@ -23,7 +23,6 @@ public class BluetoothCommandService {
     UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 //    private static final UUID MY_UUID = UUID.fromString("04c6093b-0000-1000-8000-00805f9b34fb");
     private final BluetoothAdapter mAdapter;
-    private final Handler mHandler;
     private ConnectThread mConnectThread;
     private ConnectedThread mConnectedThread;
     private int mState;
@@ -42,13 +41,11 @@ public class BluetoothCommandService {
     /**
      * Constructor. Prepares a new BluetoothChat session.
      * @param context  The UI Activity Context
-     * @param handler  A Handler to send messages back to the UI Activity
      */
-    public BluetoothCommandService(Context context, Handler handler) {
+    public BluetoothCommandService(Context context) {
         mAdapter = BluetoothAdapter.getDefaultAdapter();
         mState = STATE_NONE;
-        //mConnectionLostCount = 0;
-        mHandler = handler;
+
     }
 
     /**
@@ -58,9 +55,6 @@ public class BluetoothCommandService {
     private synchronized void setState(int state) {
         if (D) Log.d(TAG, "setState() " + mState + " -> " + state);
         mState = state;
-
-        // Give the new state to the Handler so the UI Activity can update
-        mHandler.obtainMessage(ActionSelectionActivity.MESSAGE_STATE_CHANGE, state, -1).sendToTarget();
     }
 
     /**
@@ -124,11 +118,10 @@ public class BluetoothCommandService {
         mConnectedThread.start();
 
         // Send the name of the connected device back to the UI Activity
-        Message msg = mHandler.obtainMessage(ActionSelectionActivity.MESSAGE_DEVICE_NAME);
         Bundle bundle = new Bundle();
         bundle.putString(ActionSelectionActivity.DEVICE_NAME, device.getName());
-        msg.setData(bundle);
-        mHandler.sendMessage(msg);
+
+
 
         // save connected device
         //mSavedDevice = device;
@@ -185,11 +178,9 @@ public class BluetoothCommandService {
         setState(STATE_LISTEN);
 
         // Send a failure message back to the Activity
-        Message msg = mHandler.obtainMessage(ActionSelectionActivity.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
         bundle.putString(ActionSelectionActivity.TOAST, "Unable to connect device");
-        msg.setData(bundle);
-        mHandler.sendMessage(msg);
+
     }
 
     /**
@@ -209,11 +200,11 @@ public class BluetoothCommandService {
 //        } else {
         setState(STATE_LISTEN);
         // Send a failure message back to the Activity
-        Message msg = mHandler.obtainMessage(ActionSelectionActivity.MESSAGE_TOAST);
+
         Bundle bundle = new Bundle();
         bundle.putString(ActionSelectionActivity.TOAST, "Device connection was lost");
-        msg.setData(bundle);
-        mHandler.sendMessage(msg);
+
+
 //        }
     }
 
@@ -322,9 +313,8 @@ public class BluetoothCommandService {
                     // Read from the InputStream
                     int bytes = mmInStream.read(buffer);
 
-                    // Send the obtained bytes to the UI Activity
-                    mHandler.obtainMessage(ActionSelectionActivity.MESSAGE_READ, bytes, -1, buffer)
-                            .sendToTarget();
+
+
                 } catch (IOException e) {
                     Log.e(TAG, "disconnected", e);
                     connectionLost();
