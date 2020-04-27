@@ -56,7 +56,7 @@ public class ActionSelectionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(ActionSelectionActivity.this, MainActivity.class);
-                intent.putExtra
+                
                 startActivity(intent);
             }
         });
