@@ -1,16 +1,17 @@
 package com.tba.andropc;
 
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        return DeviceViewHolder(mLayoutInflater.inflate(R.layout.devicename, parent, false))
     }
 
     @Override
