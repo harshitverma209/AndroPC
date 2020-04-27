@@ -55,6 +55,7 @@ public class BluetoothCommandService implements Parcelable {
 
     protected BluetoothCommandService(Parcel in) {
         mState = in.readInt();
+//        mHandler= (Handler) in.readValue(getClass().getClassLoader());
 
     }
 
