@@ -7,6 +7,8 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -66,15 +68,15 @@ public class ActionSelectionActivity extends AppCompatActivity {
                 case MESSAGE_STATE_CHANGE:
                     switch (msg.arg1) {
                         case BluetoothCommandService.STATE_CONNECTED:
-                            mTitle.setText(R.string.title_connected_to);
-                            mTitle.append(mConnectedDeviceName);
+//                            mTitle.setText(R.string.title_connected_to);
+//                            mTitle.append(mConnectedDeviceName);
                             break;
                         case BluetoothCommandService.STATE_CONNECTING:
-                            mTitle.setText(R.string.title_connecting);
+//                            mTitle.setText(R.string.title_connecting);
                             break;
                         case BluetoothCommandService.STATE_LISTEN:
                         case BluetoothCommandService.STATE_NONE:
-                            mTitle.setText(R.string.title_not_connected);
+//                            mTitle.setText(R.string.title_not_connected);
                             break;
                     }
                     break;
@@ -92,5 +94,5 @@ public class ActionSelectionActivity extends AppCompatActivity {
         }
     };
 
-    
+
 }
