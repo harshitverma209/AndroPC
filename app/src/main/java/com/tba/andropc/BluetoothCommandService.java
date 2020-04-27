@@ -15,5 +15,5 @@ import java.io.OutputStream;
 import java.util.UUID;
 
 public class BluetoothCommandService {
-
+    
 }
