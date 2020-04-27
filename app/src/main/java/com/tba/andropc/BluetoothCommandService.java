@@ -16,6 +16,8 @@ import java.util.UUID;
 
 public class BluetoothCommandService {
     private static BluetoothAdapter bluetoothAdapter;
+    private static BluetoothSocket bluetoothSocket;
+
     public BluetoothCommandService(Context context){
         bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
     }
@@ -25,7 +27,7 @@ public class BluetoothCommandService {
     }
 
     public static void connect(BluetoothDevice device){
-        
+        bluetoothSocket=device.createRfcommSocketToServiceRecord(UUID);
     }
     public static void scanDevices(){
         bluetoothAdapter.startDiscovery();
