@@ -17,7 +17,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.UUID;
 
-public class BluetoothCommandService extends Service {
+public class BluetoothCommandService {
     private static final String TAG = "BluetoothCommandService";
     private static final boolean D = true;
 
