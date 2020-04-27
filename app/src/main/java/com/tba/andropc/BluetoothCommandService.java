@@ -20,6 +20,22 @@ public class BluetoothCommandService {
         bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
     }
     public void connect(){
-        
+
+    }
+    private void scanDevices(){
+        bluetoothAdapter.startDiscovery();
+    }
+    public void enableBT(){
+        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (!bluetoothAdapter.isEnabled()){
+            mBluetoothAdapter.enable();
+        }
+
+    }
+    public void disableBT(){
+        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (bluetoothAdapter.isEnabled()){
+            mBluetoothAdapter.disable();
+        }
     }
 }

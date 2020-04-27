@@ -68,22 +68,8 @@ public class DevicesActivity extends AppCompatActivity {
 
 
     }
-    private void scanDevices(){
-        bluetoothAdapter.startDiscovery();
-    }
-    public void enableBT(){
-        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        if (!bluetoothAdapter.isEnabled()){
-            mBluetoothAdapter.enable();
-        }
 
-    }
-    public void disableBT(){
-        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        if (bluetoothAdapter.isEnabled()){
-            mBluetoothAdapter.disable();
-        }
-    }
+
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
