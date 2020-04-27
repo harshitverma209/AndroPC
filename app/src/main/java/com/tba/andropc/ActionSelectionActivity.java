@@ -38,6 +38,10 @@ public class ActionSelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_action_selection);
+        setupCommand();
+
+
+
         act_trackpad=findViewById(R.id.act_trackpad);
         act_trackpad.setOnClickListener(new View.OnClickListener() {
             @Override
