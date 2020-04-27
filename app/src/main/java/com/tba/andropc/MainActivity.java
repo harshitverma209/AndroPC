@@ -25,7 +25,7 @@ BluetoothCommandService bluetoothCommandService;
         RightClick=findViewById(R.id.btnRightClick);
         trackpad=findViewById(R.id.trackPad);
 
-        bluetoothCommandService=new BluetoothCommandService(this,)
+        bluetoothCommandService=new BluetoothCommandService(this);
 
 
 
