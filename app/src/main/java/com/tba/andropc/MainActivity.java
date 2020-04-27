@@ -78,6 +78,6 @@ BluetoothCommandService bluetoothCommandService;
     public void sendTextToPC()
     {
         String text4PC=etMain.getText().toString();
-        bluetoothCommandService.write(text4PC);
+        bluetoothCommandService.write(text4PC.getBytes());
     }
 }
