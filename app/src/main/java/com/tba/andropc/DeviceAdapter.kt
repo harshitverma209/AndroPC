@@ -14,6 +14,7 @@ import java.util.*
 
 class DeviceAdapter(context: Context, deviceModel: ArrayList<DeviceModel>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var deviceList = deviceModel
+    var context=context;
 
     private val mLayoutInflater by lazy { LayoutInflater.from(context) }
 
@@ -32,12 +33,12 @@ class DeviceAdapter(context: Context, deviceModel: ArrayList<DeviceModel>): Recy
         (holder as DeviceViewHolder).bindData(deviceList[position])
     }
 
-    inner class DeviceViewHolder(context: Context,itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class DeviceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindData(dev: DeviceModel) {
             itemView.name.text= dev.deviceName;
             itemView.address.text=dev.deviceMac;
             itemView.setOnClickListener {
-                val intent = Intent(this.context,ActionSelectionActivity::class.java)
+                val intent = Intent(context,ActionSelectionActivity::class.java)
                 startActivity(intent)
             }
         }
