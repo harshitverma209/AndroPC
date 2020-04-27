@@ -15,13 +15,6 @@ import android.widget.Toast;
 
 public class ActionSelectionActivity extends AppCompatActivity {
 
-
-
-
-    // Local Bluetooth adapter
-    private BluetoothAdapter mBluetoothAdapter = null;
-    // Member object for Bluetooth Command Service
-    private BluetoothCommandService mCommandService = null;
     private String deviceMac;
 
     Button act_trackpad;
@@ -31,7 +24,7 @@ public class ActionSelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_action_selection);
-        setupCommand();
+
         Intent intent=getIntent();
 
         deviceMac=intent.getStringExtra("deviceMac");
@@ -48,10 +41,7 @@ public class ActionSelectionActivity extends AppCompatActivity {
             }
         });
     }
-    private void setupCommand() {
-        // Initialize the BluetoothChatService to perform bluetooth connections
-        mCommandService = new BluetoothCommandService(this);
-    }
+
 
 
 }
