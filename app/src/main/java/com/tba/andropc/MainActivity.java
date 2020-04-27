@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     String connect;
     View trackpad;
     private int KEYBOARD_MODE=1;
+    private int MOUSE_MODE=2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
