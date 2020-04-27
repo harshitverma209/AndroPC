@@ -33,7 +33,7 @@ public class ActionSelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_action_selection);
         setupCommand();
         Intent intent=getIntent();
-        
+
         deviceMac=intent.getStringExtra("deviceMac");
         BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(deviceMac);
         mCommandService.connect(device);
