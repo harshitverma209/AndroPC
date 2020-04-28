@@ -17,7 +17,7 @@ public class ActionSelectionActivity extends AppCompatActivity {
 
     private String deviceMac;
 
-    Button act_trackpad;
+    Button act_trackpad ,mouse,media;
 
 
     @Override
@@ -30,7 +30,25 @@ public class ActionSelectionActivity extends AppCompatActivity {
         deviceMac=intent.getStringExtra("deviceMac");
         BluetoothDevice device = BluetoothCommandService.getAdapter().getRemoteDevice(deviceMac);
         BluetoothCommandService.connect(device);
+        mouse=findViewById(R.id.mousepad);
+        media=findViewById(R.id.media);
+        mouse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent i=new Intent(ActionSelectionActivity.this,TrackPad.class);
+                startActivity(i);
+
+            }
+        });media.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i=new Intent(ActionSelectionActivity.this,MediaController.class);
+                startActivity(i);
+
+            }
+        });
         act_trackpad=findViewById(R.id.act_trackpad);
         act_trackpad.setOnClickListener(new View.OnClickListener() {
             @Override
