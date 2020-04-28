@@ -3,10 +3,11 @@ package com.tba.andropc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 
 public class MediaController extends AppCompatActivity {
-
+    final String pl="1",rew="2",forw="3",volup="4",voldown="5",silent="6",fullscr="7";
     ImageButton play,rewind,forward,volumeup,volumedown,mute,fullscreen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,47 @@ public class MediaController extends AppCompatActivity {
         volumeup.setImageResource(R.drawable.volumeupmedia);
         mute.setImageResource(R.drawable.mute);
         fullscreen.setImageResource(R.drawable.fullscreenmedia);
-
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BluetoothCommandService.write(pl);
+            }
+        });
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BluetoothCommandService.write(pl);
+            }
+        });
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BluetoothCommandService.write(pl);
+            }
+        });
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BluetoothCommandService.write(pl);
+            }
+        });
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BluetoothCommandService.write(pl);
+            }
+        });
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BluetoothCommandService.write(pl);
+            }
+        });
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BluetoothCommandService.write(pl);
+            }
+        });
     }
 }
