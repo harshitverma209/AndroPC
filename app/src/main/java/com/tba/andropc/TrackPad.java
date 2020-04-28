@@ -60,4 +60,9 @@ public class TrackPad extends AppCompatActivity {
         });
 
     }
+
+    private void moveMouse(float movementInX, float movementInY) {
+//        Log.d("chech", movementInX+","+movementInY);
+        BluetoothCommandService.moveMouse(movementInX,movementInY);
+    }
 }
