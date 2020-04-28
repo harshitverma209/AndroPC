@@ -50,6 +50,6 @@ public class TrackPad extends AppCompatActivity {
                 return true;
             }
         });
-    
+
     }
 }
