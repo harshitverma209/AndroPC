@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 
 public class TrackPad extends AppCompatActivity {
 
+    Button LeftClickpad,RightClickpad;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
