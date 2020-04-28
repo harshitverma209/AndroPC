@@ -37,6 +37,7 @@ public class BluetoothCommandService {
             if(bluetoothSocket!=null){
                 bluetoothSocket.close();
             }
+            Log.d("chech",device.getName());
             bluetoothSocket=device.createRfcommSocketToServiceRecord(uuid);
             bluetoothSocket.connect();
             out=bluetoothSocket.getOutputStream();
