@@ -8,8 +8,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
-import static com.tba.andropc.BluetoothCommandService.moveMouse;
-
 public class TrackPad extends AppCompatActivity {
 
     Button LeftClickpad,RightClickpad;
