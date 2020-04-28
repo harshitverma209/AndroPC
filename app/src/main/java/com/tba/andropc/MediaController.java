@@ -21,11 +21,11 @@ public class MediaController extends AppCompatActivity {
         mute=findViewById(R.id.mute);
         play.setImageResource(R.drawable.playmedia);
         rewind.setImageResource(R.drawable.fastrewindmedia);
-        play.setImageResource(R.drawable.fastformedia);
-        play.setImageResource(R.drawable.volumedownmedia);
-        play.setImageResource(R.drawable.volumeupmedia);
-        play.setImageResource(R.drawable.mute);
-        play.setImageResource(R.drawable.fullscreenmedia);
+        forward.setImageResource(R.drawable.fastformedia);
+        volumedown.setImageResource(R.drawable.volumedownmedia);
+        volumeup.setImageResource(R.drawable.volumeupmedia);
+        mute.setImageResource(R.drawable.mute);
+        fullscreen.setImageResource(R.drawable.fullscreenmedia);
 
     }
 }
