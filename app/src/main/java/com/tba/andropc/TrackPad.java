@@ -11,6 +11,8 @@ import android.widget.Button;
 public class TrackPad extends AppCompatActivity {
 
     Button LeftClickpad,RightClickpad;
+
+    View trackpadfull;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
