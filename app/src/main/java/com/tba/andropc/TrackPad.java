@@ -13,7 +13,6 @@ public class TrackPad extends AppCompatActivity {
     Button LeftClickpad,RightClickpad;
 
     private int NO_MODE=0;
-    private int KEYBOARD_MODE=1;
     private int MOUSE_MODE=2;
     View trackpadfull;
     @Override
