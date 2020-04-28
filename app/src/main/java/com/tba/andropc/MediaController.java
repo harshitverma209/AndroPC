@@ -33,40 +33,40 @@ public class MediaController extends AppCompatActivity {
                 BluetoothCommandService.write(pl);
             }
         });
-        play.setOnClickListener(new View.OnClickListener() {
+        rewind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(pl);
+                BluetoothCommandService.write(rew);
             }
         });
-        play.setOnClickListener(new View.OnClickListener() {
+        forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(pl);
+                BluetoothCommandService.write(forw);
             }
         });
-        play.setOnClickListener(new View.OnClickListener() {
+        fullscreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(pl);
+                BluetoothCommandService.write(fullscr);
             }
         });
-        play.setOnClickListener(new View.OnClickListener() {
+        volumeup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(pl);
+                BluetoothCommandService.write(volup);
             }
         });
-        play.setOnClickListener(new View.OnClickListener() {
+        volumedown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(pl);
+                BluetoothCommandService.write(voldown);
             }
         });
-        play.setOnClickListener(new View.OnClickListener() {
+        mute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(pl);
+                BluetoothCommandService.write(silent);
             }
         });
     }
