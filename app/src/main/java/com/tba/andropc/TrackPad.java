@@ -8,6 +8,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
+import static com.tba.andropc.BluetoothCommandService.moveMouse;
+
 public class TrackPad extends AppCompatActivity {
 
     Button LeftClickpad,RightClickpad;
@@ -17,7 +19,11 @@ public class TrackPad extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_pad);
-        trackpad.setOnTouchListener(new View.OnTouchListener() {
+
+        LeftClickpad=findViewById(R.id.btnLeftClick);
+        RightClickpad=findViewById(R.id.btnRightClick);
+        trackpadfull=findViewById(R.id.trackPad);
+        trackpadfull.setOnTouchListener(new View.OnTouchListener() {
             float posX,posY;
             float newPosX,newPosY;
             float movementInX,movementInY;
