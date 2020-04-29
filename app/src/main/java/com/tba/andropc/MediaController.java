@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MediaController extends AppCompatActivity {
-    final String pl="1",rew="2",forw="3",volup="4",voldown="5",silent="6",fullscr="7";
+    final String PLAY="1",REWIND="2",FORWARD="3",VOLUMEUP="4",VOLUMEDOWN="5",SILENT="6",FULLSCREEN="7";
     ImageButton play,rewind,forward,volumeup,volumedown,mute,fullscreen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,43 +30,43 @@ public class MediaController extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(pl);
+                BluetoothCommandService.write(PLAY);
             }
         });
         rewind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(rew);
+                BluetoothCommandService.write(REWIND);
             }
         });
         forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(forw);
+                BluetoothCommandService.write(FORWARD);
             }
         });
         fullscreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(fullscr);
+                BluetoothCommandService.write(FULLSCREEN);
             }
         });
         volumeup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(volup);
+                BluetoothCommandService.write(VOLUMEUP);
             }
         });
         volumedown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(voldown);
+                BluetoothCommandService.write(VOLUMEDOWN);
             }
         });
         mute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BluetoothCommandService.write(silent);
+                BluetoothCommandService.write(SILENT);
             }
         });
     }

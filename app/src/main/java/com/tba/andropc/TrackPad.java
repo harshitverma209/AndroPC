@@ -10,20 +10,20 @@ import android.widget.Button;
 
 public class TrackPad extends AppCompatActivity {
 
-    Button LeftClickpad,RightClickpad;
+    Button LeftClickPad,RightClickPad;
 
     private int NO_MODE=0;
     private int MOUSE_MODE=2;
-    View trackpadfull;
+    View trackPadFull;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_pad);
 
-        LeftClickpad=findViewById(R.id.btnLeftClick);
-        RightClickpad=findViewById(R.id.btnRightClick);
-        trackpadfull=findViewById(R.id.trackPad);
-        trackpadfull.setOnTouchListener(new View.OnTouchListener() {
+        LeftClickPad=findViewById(R.id.btnLeftClick);
+        RightClickPad=findViewById(R.id.btnRightClick);
+        trackPadFull=findViewById(R.id.trackPad);
+        trackPadFull.setOnTouchListener(new View.OnTouchListener() {
             float posX,posY;
             float newPosX,newPosY;
             float movementInX,movementInY;
