@@ -19,12 +19,13 @@ import com.tba.andropc.models.DeviceModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 public class DevicesActivity extends AppCompatActivity {
     private BluetoothAdapter bluetoothAdapter;
     RecyclerView deviceRecyclerView;
-    private ArrayList<DeviceModel> devicesList;
+    private Set<DeviceModel> devicesList;
     public UUID uuid;
     DeviceAdapter dev;
     @Override
@@ -36,7 +37,7 @@ public class DevicesActivity extends AppCompatActivity {
         BluetoothCommandService.init();
 
 
-        devicesList=new ArrayList<DeviceModel>();
+        devicesList=new Set<DeviceModel>();
 
 
         deviceRecyclerView=findViewById(R.id.rec);
