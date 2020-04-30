@@ -9,8 +9,10 @@
 
     <ImageButton
         android:id="@+id/play"
+        style="@android:style/Widget.Material.Light.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@id/mute"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,8 +22,10 @@
     <ImageButton
         android:id="@+id/rewind"
 
+        style="@android:style/Widget.Material.Light.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@id/mute"
         app:layout_constraintEnd_toStartOf="@id/play"
@@ -31,8 +35,10 @@
     <ImageButton
         android:id="@+id/forward"
 
+        style="@android:style/Widget.Material.Light.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@id/mute"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,8 +48,10 @@
     <ImageButton
         android:id="@+id/volumeup"
 
+        style="@android:style/Widget.Material.Light.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,8 +61,10 @@
     <ImageButton
         android:id="@+id/volumedown"
 
+        style="@android:style/Widget.Material.Light.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/mute"
@@ -64,8 +74,10 @@
     <ImageButton
         android:id="@+id/mute"
 
+        style="@android:style/Widget.Material.Light.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,8 +87,10 @@
     <ImageButton
         android:id="@+id/fullscreen"
 
+        style="@android:style/Widget.Material.Light.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
