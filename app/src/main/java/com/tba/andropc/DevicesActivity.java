@@ -19,7 +19,6 @@ import com.tba.andropc.models.DeviceModel;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -29,21 +28,40 @@ public class DevicesActivity extends AppCompatActivity {
     private Set<DeviceModel> devicesList;
     public UUID uuid;
     DeviceAdapter dev;
+    private ArrayList<DeviceModel> devicesArrayList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Log.d("chech", "Oncreate()");
         setContentView(R.layout.activity_devices);
+        deviceRecyclerView=findViewById(R.id.rec);
 
-        BluetoothCommandService.init();
+
+//        Log.d("chech", "OnStart()");
+        BluetoothCommandService.init(this);
+
+        bluetoothAdapter =BluetoothAdapter.getDefaultAdapter();
+
+
+        uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+
+        IntentFilter filter = new IntentFilter();
+        if(!bluetoothAdapter.isEnabled()) {
+            BluetoothCommandService.enableBT();
+            filter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
+        }
+        filter.addAction(BluetoothDevice.ACTION_FOUND);
+        filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED);
+        filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
+
+
+        registerReceiver(mReceiver, filter);
 
 
         devicesList=new HashSet<DeviceModel>();
-
-
-        deviceRecyclerView=findViewById(R.id.rec);
-
-        dev= new DeviceAdapter(this, devicesList);
+        devicesArrayList=new ArrayList<DeviceModel>();
+        dev= new DeviceAdapter(this, devicesArrayList);
         deviceRecyclerView.setAdapter(dev);
 
         LinearLayoutManager lm = new LinearLayoutManager(this);
@@ -51,19 +69,10 @@ public class DevicesActivity extends AppCompatActivity {
 
         deviceRecyclerView.setLayoutManager(lm);
 
-        bluetoothAdapter =BluetoothAdapter.getDefaultAdapter();
-        BluetoothCommandService.enableBT();
-
-        uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-        IntentFilter filter = new IntentFilter();
-
-        filter.addAction(BluetoothDevice.ACTION_FOUND);
-        filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED);
-        filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
-
-        registerReceiver(mReceiver, filter);
 
         BluetoothCommandService.scanDevices();
+
+
 
 
 
@@ -93,11 +102,16 @@ public class DevicesActivity extends AppCompatActivity {
                 BluetoothDevice device =  intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 DeviceModel deviceModel = new DeviceModel(device.getName(),device.getAddress());
                 if(!devicesList.contains(deviceModel)) {
+//                    devicesArrayList.add(deviceModel);
                     devicesList.add(deviceModel);
-                    Log.d("chech", "got it");
+                    devicesArrayList.add(deviceModel);
+                    Log.d("chech", devicesList.size()+"");
                     showToast("Found device " + device.getName());
                     update();
                 }
+            }else if (BluetoothAdapter.ACTION_STATE_CHANGED.equals(action)) {
+                //Bluetooth Turned On, most probably
+                BluetoothCommandService.scanDevices();
             }
         }
     };
@@ -122,4 +136,8 @@ public class DevicesActivity extends AppCompatActivity {
         BluetoothCommandService.disableBT();
         unregisterReceiver(mReceiver);
     }
+
+
+
+
 }

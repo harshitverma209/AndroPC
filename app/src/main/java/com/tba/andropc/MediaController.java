@@ -3,17 +3,20 @@ package com.tba.andropc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
 public class MediaController extends AppCompatActivity {
-    final String PLAY="1",REWIND="2",FORWARD="3",VOLUMEUP="4",VOLUMEDOWN="5",MUTE="6",FULLSCREEN="7";
+    private final String PLAY="1",REWIND="2",FORWARD="3",VOLUMEUP="4",VOLUMEDOWN="5",MUTE="6",FULLSCREEN="7";
+    private final int NO_MODE=0,MEDIA_MODE=1;
     ImageButton play,rewind,forward,volumeup,volumedown,mute,fullscreen;
     View.OnClickListener mediaControlsListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_media_controller);
+        BluetoothCommandService.setMode(MEDIA_MODE);
         play=findViewById(R.id.play);
         rewind=findViewById(R.id.rewind);
         forward=findViewById(R.id.forward);
@@ -28,7 +31,7 @@ public class MediaController extends AppCompatActivity {
         volumeup.setImageResource(R.drawable.volumeupmedia);
         mute.setImageResource(R.drawable.mute);
         fullscreen.setImageResource(R.drawable.fullscreenmedia);
-        initMedidaControlsListener();
+        initMediaControlsListener();
         play.setOnClickListener(mediaControlsListener);
         rewind.setOnClickListener(mediaControlsListener);
         forward.setOnClickListener(mediaControlsListener);
@@ -39,7 +42,7 @@ public class MediaController extends AppCompatActivity {
 
     }
 
-    private void initMedidaControlsListener() {
+    private void initMediaControlsListener() {
         mediaControlsListener=new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,4 +92,10 @@ public class MediaController extends AppCompatActivity {
         };
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("chech", "MediaController destroyed");
+        BluetoothCommandService.setMode(NO_MODE);
+    }
 }

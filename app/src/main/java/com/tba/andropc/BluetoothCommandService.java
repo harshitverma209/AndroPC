@@ -8,6 +8,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,12 +20,14 @@ public class BluetoothCommandService {
     private static BluetoothAdapter bluetoothAdapter;
     private static BluetoothSocket bluetoothSocket;
     private static OutputStream out;
+    private static Context context;
 
     public BluetoothCommandService(Context context){
         bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
     }
-    public static void init(){
+    public static void init(Context context){
         bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
+        BluetoothCommandService.context=context;
     }
     public static BluetoothAdapter getAdapter() {
         return bluetoothAdapter;
@@ -46,7 +49,13 @@ public class BluetoothCommandService {
         }
     }
     public static void scanDevices(){
+        if(bluetoothAdapter.isDiscovering()){
+            bluetoothAdapter.cancelDiscovery();
+        }
         bluetoothAdapter.startDiscovery();
+        if(bluetoothAdapter.isDiscovering()){
+            Toast.makeText(context, "Scanning for Bluetooth Devices", Toast.LENGTH_SHORT).show();
+        }
     }
     public static void enableBT(){
 
