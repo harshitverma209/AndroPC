@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 public class MediaController extends AppCompatActivity {
     private final String PLAY="1",REWIND="2",FORWARD="3",VOLUMEUP="4",VOLUMEDOWN="5",MUTE="6",FULLSCREEN="7";
-    private final int NO_MODE=0,MEDIA_MODE=1;
+    private final int NO_MODE=0,MEDIA_MODE=3;
     ImageButton play,rewind,forward,volumeup,volumedown,mute,fullscreen;
     View.OnClickListener mediaControlsListener;
     @Override
