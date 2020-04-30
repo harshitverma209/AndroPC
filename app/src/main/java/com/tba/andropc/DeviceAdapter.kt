@@ -12,7 +12,7 @@ import com.tba.andropc.models.DeviceModel
 import kotlinx.android.synthetic.main.devicename.view.*
 import java.util.*
 
-class DeviceAdapter(context: Context, deviceModel: ArrayList<DeviceModel>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class DeviceAdapter(context: Context, deviceModel: Set<DeviceModel>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var deviceList = deviceModel
     var context=context;
 

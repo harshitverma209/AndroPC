@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.tba.andropc.models.DeviceModel;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -37,7 +38,7 @@ public class DevicesActivity extends AppCompatActivity {
         BluetoothCommandService.init();
 
 
-        devicesList=new Set<DeviceModel>();
+        devicesList=new HashSet<DeviceModel>();
 
 
         deviceRecyclerView=findViewById(R.id.rec);
