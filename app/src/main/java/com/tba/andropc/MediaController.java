@@ -24,7 +24,7 @@ public class MediaController extends AppCompatActivity {
         volumedown=findViewById(R.id.volumedown);
         volumeup=findViewById(R.id.volumeup);
         mute=findViewById(R.id.mute);
-        play.setImageResource(R.drawable.playmedia);
+      //  play.setImageResource(R.drawable.playmedia);
         rewind.setImageResource(R.drawable.fastrewindmedia);
         forward.setImageResource(R.drawable.fastformedia);
         volumedown.setImageResource(R.drawable.volumedownmedia);

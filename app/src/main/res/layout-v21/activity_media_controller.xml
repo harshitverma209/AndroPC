@@ -7,7 +7,8 @@
     android:background="#FFFFFF"
     tools:context=".MediaController">
 
-    <ImageButton
+    <Button
+        android:drawableBottom="@drawable/playmedia"
         android:id="@+id/play"
         style="@android:style/Widget.Material.Light.ImageButton"
         android:layout_width="wrap_content"
