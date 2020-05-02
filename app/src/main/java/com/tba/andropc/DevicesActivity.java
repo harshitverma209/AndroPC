@@ -101,8 +101,10 @@ public class DevicesActivity extends AppCompatActivity {
 
                 BluetoothDevice device =  intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 DeviceModel deviceModel = new DeviceModel(device.getName(),device.getAddress());
+                Log.d("chech",devicesList.contains(deviceModel)+"");
                 if(!devicesList.contains(deviceModel)) {
 //                    devicesArrayList.add(deviceModel);
+                    Log.d("chech","Not present");
                     devicesList.add(deviceModel);
                     devicesArrayList.add(deviceModel);
                     Log.d("chech", devicesList.size()+"");
