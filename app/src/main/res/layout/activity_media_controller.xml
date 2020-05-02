@@ -20,7 +20,6 @@
 
     <Button
         android:id="@+id/rewind"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/fastrewindmedia"
@@ -32,7 +31,6 @@
 
     <Button
         android:id="@+id/forward"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/fastformedia"
@@ -44,7 +42,6 @@
 
     <Button
         android:id="@+id/volumeup"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/volumeupmedia"
@@ -56,7 +53,6 @@
 
     <Button
         android:id="@+id/volumedown"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/volumedownmedia"
@@ -68,7 +64,6 @@
 
     <Button
         android:id="@+id/mute"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/mute"
@@ -80,8 +75,6 @@
 
     <Button
         android:id="@+id/fullscreen"
-
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/fullscreenmedia"
