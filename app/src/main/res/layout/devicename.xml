@@ -29,6 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="address"/>
     <ImageView
+        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/name"
