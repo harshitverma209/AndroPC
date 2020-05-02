@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class TrackPad extends AppCompatActivity {
 
-    Button LeftClickPad,RightClickPad;
+    Button leftClickPad,rightClickPad;
 
     private int NO_MODE=0;
     private int MOUSE_MODE=2;
@@ -20,8 +20,8 @@ public class TrackPad extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_pad);
 
-        LeftClickPad=findViewById(R.id.btnLeftClick);
-        RightClickPad=findViewById(R.id.btnRightClick);
+        leftClickPad=findViewById(R.id.btnLeftClick);
+        rightClickPad=findViewById(R.id.btnRightClick);
         trackPadFull=findViewById(R.id.trackPad);
         trackPadFull.setOnTouchListener(new View.OnTouchListener() {
             float posX,posY;
@@ -51,6 +51,7 @@ public class TrackPad extends AppCompatActivity {
                         break;
                     }
                     case MotionEvent.ACTION_UP:{
+
                         BluetoothCommandService.setMode(NO_MODE);
                     }
                     default:{
