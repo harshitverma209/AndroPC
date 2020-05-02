@@ -67,7 +67,13 @@ public class TrackPad extends AppCompatActivity {
                 switch(event.getActionMasked()){
                     case MotionEvent.ACTION_DOWN: {
                         Log.d("chech", "Left click Down!");
-                        
+
+//                        BluetoothCommandService.setMode(MOUSE_MODE);
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        Log.d("chech", "Left click Up!");
+
 //                        BluetoothCommandService.setMode(MOUSE_MODE);
                         break;
                     }
