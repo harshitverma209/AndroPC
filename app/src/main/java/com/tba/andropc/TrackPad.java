@@ -61,7 +61,13 @@ public class TrackPad extends AppCompatActivity {
                 return true;
             }
         });
-
+        leftClickPad.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                
+                return true;
+            }
+        });
     }
 
     private void moveMouse(float movementInX, float movementInY) {
