@@ -76,6 +76,7 @@ public class TrackPad extends AppCompatActivity {
                         Log.d("chech", "Left click Up!");
                         BluetoothCommandService.write("LC");
                         BluetoothCommandService.setMode(NO_MODE);
+//                        v.performClick();
                         break;
                     }
                 }
