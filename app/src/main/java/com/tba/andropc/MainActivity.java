@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
-                        Log.d("chech", "Left click Up!");
+                        Log.d("chech", "Right click Up!");
                         BluetoothCommandService.write("RCU");
                         BluetoothCommandService.setMode(NO_MODE);
 //                        v.performClick();
