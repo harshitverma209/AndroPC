@@ -2,7 +2,7 @@ package com.tba.andropc.models;
 
 public class DeviceModel {
     public DeviceModel(String deviceName, String deviceMac) {
-        this.deviceName=deviceName;
+        this.deviceName=deviceName="name not found";
         this.deviceMac=deviceMac;
 
     }
