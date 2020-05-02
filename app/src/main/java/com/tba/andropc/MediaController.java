@@ -24,6 +24,7 @@ public class MediaController extends AppCompatActivity {
         volumedown=findViewById(R.id.volumedown);
         volumeup=findViewById(R.id.volumeup);
         mute=findViewById(R.id.mute);
+        /*
         play.setBackground(getResources().getDrawable(R.drawable.playmedia));
         rewind.setBackground(getResources().getDrawable(R.drawable.fastrewindmedia));
         forward.setBackground(getResources().getDrawable(R.drawable.fastformedia));
@@ -31,7 +32,7 @@ public class MediaController extends AppCompatActivity {
         volumeup.setBackground(getResources().getDrawable(R.drawable.volumeupmedia));
         mute.setBackground(getResources().getDrawable(R.drawable.mute));
         fullscreen.setBackground(getResources().getDrawable(R.drawable.fullscreenmedia));
-        initMediaControlsListener();
+       */ initMediaControlsListener();
         play.setOnClickListener(mediaControlsListener);
         rewind.setOnClickListener(mediaControlsListener);
         forward.setOnClickListener(mediaControlsListener);
