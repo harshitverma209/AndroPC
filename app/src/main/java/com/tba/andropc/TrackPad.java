@@ -15,6 +15,12 @@ public class TrackPad extends AppCompatActivity {
     private int NO_MODE=0;
     private int MOUSE_MODE=2;
     View trackPadFull;
+
+    private static final String LEFT_CLICK_DOWN = "1";
+    private static final String LEFT_CLICK_UP = "2";
+    private static final String RIGHT_CLICK_DOWN = "3";
+    private static final String RIGHT_CLICK_UP = "4";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,12 +75,12 @@ public class TrackPad extends AppCompatActivity {
                         Log.d("chech", "Left click Down!");
 
                         BluetoothCommandService.setMode(MOUSE_MODE);
-                        BluetoothCommandService.write("LCD");
+                        BluetoothCommandService.write(LEFT_CLICK_DOWN);
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
                         Log.d("chech", "Left click Up!");
-                        BluetoothCommandService.write("LCU");
+                        BluetoothCommandService.write(LEFT_CLICK_UP);
                         BluetoothCommandService.setMode(NO_MODE);
 //                        v.performClick();
                         break;
@@ -92,12 +98,12 @@ public class TrackPad extends AppCompatActivity {
                         Log.d("chech", "Right click Down!");
 
                         BluetoothCommandService.setMode(MOUSE_MODE);
-                        BluetoothCommandService.write("RCD");
+                        BluetoothCommandService.write(RIGHT_CLICK_DOWN);
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
-                        Log.d("chech", "Left click Up!");
-                        BluetoothCommandService.write("RCU");
+                        Log.d("chech", "Right click Up!");
+                        BluetoothCommandService.write(RIGHT_CLICK_UP);
                         BluetoothCommandService.setMode(NO_MODE);
 //                        v.performClick();
                         break;
