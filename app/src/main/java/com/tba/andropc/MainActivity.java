@@ -87,12 +87,12 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("chech", "Left click Down!");
 
                         BluetoothCommandService.setMode(MOUSE_MODE);
-                        BluetoothCommandService.write("LCD");
+                        BluetoothCommandService.write(LEFT_CLICK_DOWN);
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
                         Log.d("chech", "Left click Up!");
-                        BluetoothCommandService.write("LCU");
+                        BluetoothCommandService.write(LEFT_CLICK_UP);
                         BluetoothCommandService.setMode(NO_MODE);
 //                        v.performClick();
                         break;
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     case MotionEvent.ACTION_UP: {
                         Log.d("chech", "Right click Up!");
-                        BluetoothCommandService.write("RCU");
+                        BluetoothCommandService.write(RIGHT_CLICK_UP);
                         BluetoothCommandService.setMode(NO_MODE);
 //                        v.performClick();
                         break;
