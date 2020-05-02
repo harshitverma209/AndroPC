@@ -25,7 +25,7 @@ import java.util.UUID;
 public class DevicesActivity extends AppCompatActivity {
     private BluetoothAdapter bluetoothAdapter;
     RecyclerView deviceRecyclerView;
-    private Set<DeviceModel> devicesMACList;
+    private Set<String> devicesMACList;
     public UUID uuid;
     DeviceAdapter dev;
     private ArrayList<DeviceModel> devicesArrayList;
