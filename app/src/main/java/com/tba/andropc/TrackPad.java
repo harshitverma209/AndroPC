@@ -16,10 +16,10 @@ public class TrackPad extends AppCompatActivity {
     private int MOUSE_MODE=2;
     View trackPadFull;
 
-    private static final String LEFT_CLICK_DOWN = "1";
-    private static final String LEFT_CLICK_UP = "2";
-    private static final String RIGHT_CLICK_DOWN = "3";
-    private static final String RIGHT_CLICK_UP = "4";
+    private static final int LEFT_CLICK_DOWN = 1;
+    private static final int LEFT_CLICK_UP = 2;
+    private static final int RIGHT_CLICK_DOWN = 3;
+    private static final int RIGHT_CLICK_UP = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
