@@ -8,7 +8,6 @@
     tools:context=".MediaController">
 
     <Button
-        android:drawableBottom="@drawable/playmedia"
         android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
