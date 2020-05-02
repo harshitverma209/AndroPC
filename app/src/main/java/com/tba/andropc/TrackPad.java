@@ -65,7 +65,12 @@ public class TrackPad extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch(event.getActionMasked()){
+                    case MotionEvent.ACTION_DOWN: {
+                        Log.d("chech", "Down!");
 
+                        BluetoothCommandService.setMode(MOUSE_MODE);
+                        break;
+                    }
                 }
                 return true;
             }
