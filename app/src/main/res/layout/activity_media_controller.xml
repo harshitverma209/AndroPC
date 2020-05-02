@@ -23,7 +23,7 @@
         android:id="@+id/rewind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/fastrewindmedia"
+        android:drawableStart="@drawable/fastrewindmedia"
         android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@id/mute"
         app:layout_constraintEnd_toStartOf="@id/play"
