@@ -25,7 +25,7 @@ import java.util.UUID;
 public class DevicesActivity extends AppCompatActivity {
     private BluetoothAdapter bluetoothAdapter;
     RecyclerView deviceRecyclerView;
-    private Set<DeviceModel> devicesList;
+    private Set<String> devicesMACList;
     public UUID uuid;
     DeviceAdapter dev;
     private ArrayList<DeviceModel> devicesArrayList;
@@ -59,7 +59,7 @@ public class DevicesActivity extends AppCompatActivity {
         registerReceiver(mReceiver, filter);
 
 
-        devicesList=new HashSet<DeviceModel>();
+        devicesMACList=new HashSet<String>();
         devicesArrayList=new ArrayList<DeviceModel>();
         dev= new DeviceAdapter(this, devicesArrayList);
         deviceRecyclerView.setAdapter(dev);
@@ -101,13 +101,11 @@ public class DevicesActivity extends AppCompatActivity {
 
                 BluetoothDevice device =  intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 DeviceModel deviceModel = new DeviceModel(device.getName(),device.getAddress());
-                Log.d("chech",devicesList.contains(deviceModel)+"");
-                if(!devicesList.contains(deviceModel)) {
+                if(!devicesMACList.contains(deviceModel.getDeviceMac())) {
 //                    devicesArrayList.add(deviceModel);
-                    Log.d("chech","Not present");
-                    devicesList.add(deviceModel);
+                    devicesMACList.add(deviceModel.getDeviceMac());
                     devicesArrayList.add(deviceModel);
-                    Log.d("chech", devicesList.size()+"");
+                    Log.d("chech", devicesMACList.size()+"");
                     showToast("Found device " + device.getName());
                     update();
                 }
