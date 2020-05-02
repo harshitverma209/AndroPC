@@ -78,7 +78,13 @@ public class BluetoothCommandService {
             e.printStackTrace();
         }
     }
-
+    public static void write(int item) {
+        try {
+            out.write(item);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public static void setMode(int mode) {
         if(mode==0){
             try {
@@ -103,4 +109,6 @@ public class BluetoothCommandService {
             e.printStackTrace();
         }
     }
+
+
 }
