@@ -96,6 +96,6 @@ public class MediaController extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d("chech", "MediaController destroyed");
-        BluetoothCommandService.setMode(NO_MODE);
+        BluetoothCommandService.write("0");
     }
 }
