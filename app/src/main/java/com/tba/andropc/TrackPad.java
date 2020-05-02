@@ -69,12 +69,35 @@ public class TrackPad extends AppCompatActivity {
                         Log.d("chech", "Left click Down!");
 
                         BluetoothCommandService.setMode(MOUSE_MODE);
-                        BluetoothCommandService.write("LC");
+                        BluetoothCommandService.write("LCD");
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
                         Log.d("chech", "Left click Up!");
-                        BluetoothCommandService.write("LC");
+                        BluetoothCommandService.write("LCU");
+                        BluetoothCommandService.setMode(NO_MODE);
+//                        v.performClick();
+                        break;
+                    }
+                }
+                return true;
+            }
+
+        });
+        rightClickPad.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getActionMasked()){
+                    case MotionEvent.ACTION_DOWN: {
+                        Log.d("chech", "Right click Down!");
+
+                        BluetoothCommandService.setMode(MOUSE_MODE);
+                        BluetoothCommandService.write("RCD");
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        Log.d("chech", "Left click Up!");
+                        BluetoothCommandService.write("RCU");
                         BluetoothCommandService.setMode(NO_MODE);
 //                        v.performClick();
                         break;
