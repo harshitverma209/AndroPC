@@ -8,9 +8,9 @@ public class DeviceModel {
     }
 
     public String getDeviceName() {
-        if (deviceName.isEmpty())
+        if (deviceName==null)
         {
-            deviceName="name not found";
+            deviceName="Name not found";
         }
         
         return deviceName;
