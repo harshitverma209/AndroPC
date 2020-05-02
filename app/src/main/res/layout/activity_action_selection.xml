@@ -7,6 +7,7 @@
     tools:context=".ActionSelectionActivity">
 
     <Button
+        android:textSize="16sp"
         android:id="@+id/act_trackpad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,6 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
+        android:textSize="16sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="mouse pad"
@@ -35,6 +37,7 @@
         app:layout_constraintBottom_toTopOf="@id/act_trackpad"
         android:id="@+id/mousepad"/>
     <Button
+        android:textSize="16sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="media control"
