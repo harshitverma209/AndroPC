@@ -17,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
     private int NO_MODE=0;
     private int KEYBOARD_MODE=1;
     private int MOUSE_MODE=2;
-    private static final char LEFT_CLICK_DOWN = '1';
-    private static final char LEFT_CLICK_UP = '2';
-    private static final char RIGHT_CLICK_DOWN = '3';
-    private static final char RIGHT_CLICK_UP = '4';
+    private static final String LEFT_CLICK_DOWN = "1";
+    private static final String LEFT_CLICK_UP = "2";
+    private static final String RIGHT_CLICK_DOWN = "3";
+    private static final String RIGHT_CLICK_UP = "4";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
