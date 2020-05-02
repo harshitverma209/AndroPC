@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     EditText etMain;
-    Button btnMain,LeftClick,RightClick;
+    Button btnMain,leftClickPad,rightClickPad;
     String connect;
     View trackpad;
     private int NO_MODE=0;
@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         etMain=findViewById(R.id.etText2Pc);
         btnMain=findViewById(R.id.btnSend);
-        LeftClick=findViewById(R.id.btnLeftClick);
-        RightClick=findViewById(R.id.btnRightClick);
+        leftClickPad=findViewById(R.id.btnLeftClick);
+        rightClickPad=findViewById(R.id.btnRightClick);
         trackpad=findViewById(R.id.trackPad);
 
 
@@ -74,6 +74,53 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return true;
             }
+        });
+
+        leftClickPad.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getActionMasked()){
+                    case MotionEvent.ACTION_DOWN: {
+                        Log.d("chech", "Left click Down!");
+
+                        BluetoothCommandService.setMode(MOUSE_MODE);
+                        BluetoothCommandService.write("LCD");
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        Log.d("chech", "Left click Up!");
+                        BluetoothCommandService.write("LCU");
+                        BluetoothCommandService.setMode(NO_MODE);
+//                        v.performClick();
+                        break;
+                    }
+                }
+                return true;
+            }
+
+        });
+        rightClickPad.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch(event.getActionMasked()){
+                    case MotionEvent.ACTION_DOWN: {
+                        Log.d("chech", "Right click Down!");
+
+                        BluetoothCommandService.setMode(MOUSE_MODE);
+                        BluetoothCommandService.write("RCD");
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        Log.d("chech", "Left click Up!");
+                        BluetoothCommandService.write("RCU");
+                        BluetoothCommandService.setMode(NO_MODE);
+//                        v.performClick();
+                        break;
+                    }
+                }
+                return true;
+            }
+
         });
 
     }
