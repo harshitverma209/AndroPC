@@ -108,7 +108,7 @@ public class DevicesActivity extends AppCompatActivity {
                     Log.d("chech", devicesMACList.size()+" : New one");
                     showToast("Found device " + device.getName());
                     update();
-                }
+                }else{
             }else if (BluetoothAdapter.ACTION_STATE_CHANGED.equals(action)) {
                 //Bluetooth Turned On, most probably
                 BluetoothCommandService.scanDevices();
