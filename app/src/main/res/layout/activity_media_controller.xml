@@ -7,77 +7,86 @@
     android:background="#FFFFFF"
     tools:context=".MediaController">
 
-    <ImageButton
+    <Button
+        android:drawableBottom="@drawable/playmedia"
         android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:background="#FFFFFF"
+        android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@id/mute"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/rewind"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:background="#FFFFFF"
+        android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@id/mute"
         app:layout_constraintEnd_toStartOf="@id/play"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/forward"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:background="#FFFFFF"
+        android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@id/mute"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/play"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/volumeup"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:background="#FFFFFF"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/mute"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/volumedown"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:background="#FFFFFF"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/mute"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/mute"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:background="#FFFFFF"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/fullscreen"
+
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:background="#FFFFFF"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

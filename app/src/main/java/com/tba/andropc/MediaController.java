@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 
 public class MediaController extends AppCompatActivity {
     private final String PLAY="1",REWIND="2",FORWARD="3",VOLUMEUP="4",VOLUMEDOWN="5",MUTE="6",FULLSCREEN="7";
     private final int NO_MODE=0,MEDIA_MODE=3;
-    ImageButton play,rewind,forward,volumeup,volumedown,mute,fullscreen;
+    Button play,rewind,forward,volumeup,volumedown,mute,fullscreen;
     View.OnClickListener mediaControlsListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +24,13 @@ public class MediaController extends AppCompatActivity {
         volumedown=findViewById(R.id.volumedown);
         volumeup=findViewById(R.id.volumeup);
         mute=findViewById(R.id.mute);
-      //  play.setImageResource(R.drawable.playmedia);
-        rewind.setImageResource(R.drawable.fastrewindmedia);
-        forward.setImageResource(R.drawable.fastformedia);
-        volumedown.setImageResource(R.drawable.volumedownmedia);
-        volumeup.setImageResource(R.drawable.volumeupmedia);
-        mute.setImageResource(R.drawable.mute);
-        fullscreen.setImageResource(R.drawable.fullscreenmedia);
+        play.setBackground(getResources().getDrawable(R.drawable.playmedia));
+        rewind.setBackground(getResources().getDrawable(R.drawable.fastrewindmedia));
+        forward.setBackground(getResources().getDrawable(R.drawable.fastformedia));
+        volumedown.setBackground(getResources().getDrawable(R.drawable.volumedownmedia));
+        volumeup.setBackground(getResources().getDrawable(R.drawable.volumeupmedia));
+        mute.setBackground(getResources().getDrawable(R.drawable.mute));
+        fullscreen.setBackground(getResources().getDrawable(R.drawable.fullscreenmedia));
         initMediaControlsListener();
         play.setOnClickListener(mediaControlsListener);
         rewind.setOnClickListener(mediaControlsListener);
