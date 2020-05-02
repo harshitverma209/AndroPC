@@ -105,7 +105,7 @@ public class DevicesActivity extends AppCompatActivity {
 //                    devicesArrayList.add(deviceModel);
                     devicesMACList.add(deviceModel.getDeviceMac());
                     devicesArrayList.add(deviceModel);
-                    Log.d("chech", devicesMACList.size()+"");
+                    Log.d("chech", devicesMACList.size()+" : New one");
                     showToast("Found device " + device.getName());
                     update();
                 }
