@@ -64,7 +64,9 @@ public class TrackPad extends AppCompatActivity {
         leftClickPad.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                
+                switch(event.getActionMasked()){
+                    
+                }
                 return true;
             }
 
