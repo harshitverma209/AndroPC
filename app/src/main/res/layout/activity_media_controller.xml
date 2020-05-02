@@ -23,7 +23,7 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="@drawable/fastrewindmedia"
         android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@id/mute"
         app:layout_constraintEnd_toStartOf="@id/play"
@@ -35,7 +35,7 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="@drawable/fastformedia"
         android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@id/mute"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="@drawable/volumeupmedia"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +59,7 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="@drawable/volumedownmedia"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/mute"
@@ -71,7 +71,7 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="@drawable/mute"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,7 +84,7 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="@drawable/fullscreenmedia"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
